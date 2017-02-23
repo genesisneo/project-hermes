@@ -5,6 +5,7 @@ var config = require('./config.json'),
     open = require('gulp-open'),
     watch = require('gulp-watch'),
     rename = require('gulp-rename'),
+    replace = require('gulp-replace'),
     connect = require('gulp-connect'),
     remove = require('gulp-remove-html'),
     runSequence = require('run-sequence');
@@ -48,6 +49,7 @@ gulp.task('copy', function() {
     var options = { keyword: 'remove' }
     return gulp.src(creativePath + '/' + config.previewHtml)
         .pipe(remove(options))
+        .pipe(replace('<!-- SFC -->', '[SFC]'))
         .pipe(rename(config.indexHtml))
         .pipe(gulp.dest(creativePath + '/'));
 });

@@ -3,7 +3,8 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### How to setup:
 ------
-* Download, Fork, or Clone this repo
+* Download, Fork, or Clone this [repo](git@github.com:genesisneo/project-hermes.git)
+* Install [node.js ^6.0.0](https://nodejs.org/en/) if you need multiple version you can use [nvm](http://nvm.sh)
 * `npm install`
 * Create a new file on `root` name `./config.json` and copy the following:
 ```
@@ -35,10 +36,15 @@ Used for creating First Screen (1Screen) LPP landing page.
 ### Commands:
 ------
 
-`gulp`
+`$ gulp`
 
 Default, this will create the server, watch for file changes and reload the page, open page your working on.
 
-`gulp deploy`
+`$ gulp deploy`
 
 This command will split your `preview.html`, separate subscription flow to `default.html` and creative to `index.html`.
+
+### Before pushing:
+------
+
+Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that text are linked from the LPP database and if subscription flow exist, you don't need to include you `default.html` file.
