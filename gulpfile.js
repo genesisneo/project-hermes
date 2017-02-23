@@ -6,6 +6,7 @@ var config = require('./config.json'),
     watch = require('gulp-watch'),
     rename = require('gulp-rename'),
     connect = require('gulp-connect'),
+    remove = require('gulp-remove-html'),
     runSequence = require('run-sequence');
 
 var creativePath = './' + config.creatives + '/' + config.creativeName + '/' + config.country + '/' + config.operatorId;
@@ -44,10 +45,9 @@ gulp.task('split', function() {
 });
 
 gulp.task('copy', function() {
+    var options = { keyword: 'remove' }
     return gulp.src(creativePath + '/' + config.previewHtml)
-        .pipe(dom(function() {
-            return this.querySelectorAll('.holder')[0].innerHTML;
-        }))
+        .pipe(remove(options))
         .pipe(rename(config.indexHtml))
         .pipe(gulp.dest(creativePath + '/'));
 });
