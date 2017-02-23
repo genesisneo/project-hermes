@@ -34,10 +34,11 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### Commands:
 ------
-```gulp```
+
+`gulp`
 
 Default, this will create the server, watch for file changes and reload the page, open page your working on.
 
-```gulp deploy```
+`gulp deploy`
 
 This command will split your `preview.html`, separate subscription flow to `default.html` and creative to `index.html`.
