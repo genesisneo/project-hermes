@@ -23,7 +23,7 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### Where:
 ------
-* `ipAddress`: is your device IP ipAddres
+* `ipAddress`: is your device IP address
 * `port`: your prefered port
 * `creative`: creative folder
 * `creativeName`: creative name that your working on
@@ -47,4 +47,4 @@ This command will split your `preview.html`, separate subscription flow to `defa
 ### Before pushing:
 ------
 
-Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that text are linked from the LPP database and if subscription flow exist, you don't need to include you `default.html` file.
+Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that text are linked from the LPP database and if subscription flow exist, you don't need to include you `default.html` file. Also please remove the `<!-- SFC -->` and `<!--<remove>-->` on your `default.html`.
