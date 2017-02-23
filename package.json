@@ -1,0 +1,20 @@
+{
+  "name": "project-hermes",
+  "version": "1.0.0",
+  "description": "Used for creating 1screen LPP landing page.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Neo Genesis",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-dom": "^0.9.17",
+    "gulp-open": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^1.2.2"
+  }
+}

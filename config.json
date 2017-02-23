@@ -1,0 +1,11 @@
+{
+    "ipAddress" : "192.168.1.11",
+    "port" : "7070",
+    "creatives" : "creatives",
+    "creativeName" : "KeyToHappiness",
+    "country" : "TR",
+    "operatorId" : "_300",
+    "previewHtml" : "preview.html",
+    "defaultHtml" : "default.html",
+    "indexHtml" : "index.html"
+}
