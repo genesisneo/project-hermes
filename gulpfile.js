@@ -5,10 +5,11 @@ var config = require('./config.json'),
     open = require('gulp-open'),
     watch = require('gulp-watch'),
     rename = require('gulp-rename'),
-    replace = require('gulp-replace'),
     connect = require('gulp-connect'),
-    remove = require('gulp-remove-html'),
-    runSequence = require('run-sequence');
+    cheerio = require('gulp-cheerio'),
+    htmlmin = require('gulp-htmlmin'),
+    runSequence = require('run-sequence'),
+    whitespace = require('gulp-whitespace');
 
 var creativePath = './' + config.creatives + '/' + config.creativeName + '/' + config.country + '/' + config.operatorId;
 
@@ -41,15 +42,22 @@ gulp.task('split', function() {
         .pipe(dom(function() {
             return this.querySelectorAll('.holder')[0].innerHTML;
         }))
+        .pipe(whitespace({
+            tabsToSpaces: 4,
+            removeTrailing: true
+        }))
         .pipe(rename(config.defaultHtml))
         .pipe(gulp.dest(creativePath + '/'));
 });
 
 gulp.task('copy', function() {
-    var options = { keyword: 'remove' }
     return gulp.src(creativePath + '/' + config.previewHtml)
-        .pipe(remove(options))
-        .pipe(replace('<!-- SFC -->', '[SFC]'))
+        .pipe(cheerio(function ($, file) {
+            $('.holder').text('[SFC]');
+        }))
+        .pipe(htmlmin({
+            decodeEntities: true
+        }))
         .pipe(rename(config.indexHtml))
         .pipe(gulp.dest(creativePath + '/'));
 });
