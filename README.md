@@ -3,7 +3,7 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### How to setup:
 ------
-* Download, Fork, or Clone this [repo](git@github.com:genesisneo/project-hermes.git)
+* Download, Fork, or Clone this repo
 * Install [node.js ^6.0.0](https://nodejs.org/en/) if you need multiple version you can use [nvm](http://nvm.sh)
 * `npm install`
 * Create a new file on `root` name `./config.json` and copy the following:
@@ -23,9 +23,9 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### Where:
 ------
-* `ipAddress`: is your device IP address
+* `ipAddress`: your device IP address or use `localhost` or `127.0.0.1`
 * `port`: your prefered port
-* `creative`: creative folder
+* `creative`: creative folder, no need to change this
 * `creativeName`: creative name that your working on
 * `country`: country iso alpha-2 code in capital letters
 * `operatorId`: operator ID, for multiple operator you can do "_100_200_300"
@@ -47,4 +47,4 @@ This command will split your `preview.html`, separate subscription flow to `defa
 ### Before pushing:
 ------
 
-Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that text are linked from the LPP database and if subscription flow exist, you don't need to include you `default.html` file. Also please remove the `<!-- SFC -->` and `<!--<remove>-->` on your `default.html`.
+Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database and if subscription flow exist. If subscription flow exist you don't need to include `default.html` file.
