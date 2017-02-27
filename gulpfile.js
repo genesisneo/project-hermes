@@ -1,5 +1,6 @@
 
 var config = require('./config.json'),
+    os = require('os'),
     gulp = require('gulp'),
     dom = require('gulp-dom'),
     open = require('gulp-open'),
@@ -12,6 +13,12 @@ var config = require('./config.json'),
     whitespace = require('gulp-whitespace');
 
 var creativePath = './' + config.creatives + '/' + config.creativeName + '/' + config.country + '/' + config.operatorId;
+var osInterface = require('os').networkInterfaces();
+var userIpAddress = Object.keys(osInterface)
+    .map(x => osInterface[x].filter(x => x.family === 'IPv4' && !x.internal)[0])
+    .filter(x => x)[0].address;
+
+// task: default
 
 gulp.task('server', function() {
     connect.server({
@@ -32,10 +39,16 @@ gulp.task('watch', function() {
 
 gulp.task('open', function() {
     var options = {};
-    options['uri'] = 'http://' + config.ipAddress + ':' + config.port + '/' + creativePath + '/' + config.previewHtml;
+    options['uri'] = 'http://' + userIpAddress + ':' + config.port + '/' + creativePath + '/' + config.previewHtml;
     gulp.src('')
         .pipe(open(options));
 });
+
+gulp.task('default', function() {
+    return runSequence('server', ['html', 'watch', 'open']);
+});
+
+// task: deploy
 
 gulp.task('split', function() {
     return gulp.src(creativePath + '/' + config.previewHtml)
@@ -62,10 +75,19 @@ gulp.task('copy', function() {
         .pipe(gulp.dest(creativePath + '/'));
 });
 
-gulp.task('default', function() {
-    return runSequence('server', ['html', 'watch', 'open']);
-});
-
 gulp.task('deploy', function() {
     return runSequence('split', 'copy');
+});
+
+// task: qr
+
+gulp.task('qr', function() {
+    var options = {};
+    options['uri'] = 'http://' + userIpAddress + ':' + config.port
+        + '/qr.html?ipaddress=' + userIpAddress + '&port=' + config.port
+        + '&creatives=' + config.creatives + '&creativename=' + config.creativeName
+        + '&country=' + config.country + '&operatorid=' + config.operatorId
+        + '&previewhtml=' + config.previewHtml;
+    gulp.src('')
+        .pipe(open(options));
 });

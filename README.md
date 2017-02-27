@@ -9,7 +9,6 @@ Used for creating First Screen (1Screen) LPP landing page.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```
 {
-    "ipAddress" : "192.168.1.11",
     "port" : "7070",
     "creatives" : "creatives",
     "creativeName" : "KeyToHappiness",
@@ -23,7 +22,6 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### Where:
 ------
-* `ipAddress`: your device IP address or use `localhost` or `127.0.0.1`
 * `port`: your prefered port
 * `creative`: creative folder, no need to change this
 * `creativeName`: creative name that your working on
@@ -38,11 +36,15 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 `$ gulp`
 
-Default, this will create the server, watch for file changes and reload the page, open page your working on.
+Default, this will create the server, watch for file changes and reload the page, open page your working on. Please note to keep this is the background.
 
 `$ gulp deploy`
 
 This command will split your `preview.html`, separate subscription flow to `default.html` and creative to `index.html`.
+
+`$ gulp qr`
+
+This command will create a QR code for you to check your page on your mobile devices. Please note that this will only open `preview.html`.
 
 ### Before pushing:
 ------
