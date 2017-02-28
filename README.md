@@ -49,4 +49,4 @@ This command will create a QR code for you to check your page on your mobile dev
 ### Before pushing:
 ------
 
-Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database and if subscription flow exist. If subscription flow exist you don't need to include `default.html` file.
+Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file.

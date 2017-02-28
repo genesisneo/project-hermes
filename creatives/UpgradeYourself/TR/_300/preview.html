@@ -17,7 +17,7 @@
     
     <div id="container" class="show-directsubscribe">
         
-        <a href="https://bing.com" id="mraid-close"></a>
+        <a href="javascript:Close()" id="mraid-close"></a>
 
         <div class="creative">
             
@@ -53,7 +53,7 @@
                     <span data-x-role="subscription-info-double-confirmation" id="double-confirmation-message">
                         Hizmet bedeli haftalık 5TL, aylık 20 TL'dir. Kabul etmek için EVET'e tıklayiniz.
                     </span>
-                    <a href="javascript:void(0)" id="double-confirmation-no" class="hlf-btn">
+                    <a href="javascript:void(0)" id="confirm-no" class="hlf-btn">
                         <span data-x-role="confirmation-no">Hayır</span>
                     </a>
                     <a href="javascript:void(0)" id="confirm" class="beat hlf-btn">
@@ -70,7 +70,7 @@
                 <!-- numberentry -->
                 <div id="numberentry">
                     <label data-x-role="enter-number" for="number" class="entry-message">Cep telefonu numaranızı girin</label>
-                    <input type="tel" id="number" maxlength="10" value="5">
+                    <input type="tel" id="input-number" maxlength="10" value="5">
                     <div class="disclaimer">
                         Paket haftalık tüm vergiler dahil 5TL, aylık 20TL’dir.<br>
                         Öğrenme Kulübü, doğrudan cep telefonunuzda uzmanlar tarafından özel olarak geliştirilmiş olan geniş bir yelpazedeki yüksek kaliteli kurslar sunan kişisel, birinci sınıf, tümü bir arada eğitim hizmetidir. Dilden, kariyer yeteneklerine; spordan yaşam tarzına kadar her şeyi içeren kategorileriyle Öğrenme Kulübü hareket halindeyken uygun boyutlu, yüksek kaliteli eğitim ihtiyacınızı karşılar!
@@ -93,7 +93,7 @@
                     <label data-x-role="subscription-info-pin-entry" for="pin" class="entry-message">
                         Aboneliğinizi doğrulamak için pin kodlu bir kısa mesaj alacaksınız. PIN kodunu aşağıya girin:
                     </label>
-                    <input type="tel" id="pin" maxlength="4">
+                    <input type="tel" id="input-pin" maxlength="4">
                     <a href="javascript:void(0)" id="submit-pin" class="btn">
                         <span data-x-role="pin-entry-submit">Onaylıyorum</span>
                     </a>
