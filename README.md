@@ -9,7 +9,7 @@ Used for creating First Screen (1Screen) LPP landing page.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```
 {
-    "port" : "7070",
+    "port" : "2727",
     "creatives" : "creatives",
     "creativeName" : "KeyToHappiness",
     "country" : "TR",

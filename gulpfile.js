@@ -12,6 +12,7 @@ var config = require('./config.json'),
     runSequence = require('run-sequence'),
     whitespace = require('gulp-whitespace');
 
+var assetsPath = './' + config.creatives + '/' + config.creativeName + '/assets';
 var creativePath = './' + config.creatives + '/' + config.creativeName + '/' + config.country + '/' + config.operatorId;
 var osInterface = require('os').networkInterfaces();
 var userIpAddress = Object.keys(osInterface)
@@ -23,18 +24,14 @@ var userIpAddress = Object.keys(osInterface)
 gulp.task('server', function() {
     connect.server({
         root: './',
-        livereload: true,
-        port: config.port
+        port: config.port,
+        livereload: true
     });
 });
 
 gulp.task('html', function() {
     gulp.src(creativePath + '/*.html')
         .pipe(connect.reload());
-});
-
-gulp.task('watch', function() {
-    gulp.watch([creativePath + '/*.html'], ['html']);
 });
 
 gulp.task('open', function() {
@@ -44,8 +41,13 @@ gulp.task('open', function() {
         .pipe(open(options));
 });
 
+gulp.task('watch', function() {
+    gulp.watch([creativePath + '/*.html'], ['html']);
+    gulp.watch([assetsPath + '/css/*.css'], ['html']);
+});
+
 gulp.task('default', function() {
-    return runSequence('server', ['html', 'watch', 'open']);
+    return runSequence('server', ['html', 'open', 'watch']);
 });
 
 // task: deploy
