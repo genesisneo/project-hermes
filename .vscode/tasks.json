@@ -8,22 +8,22 @@
         {
             "taskName": "Hermes: Browse",
             "command": "gulp",
-            "args": ["browse"]
+            "args": ["--gulpfile", "./utilities/browse.js"]
         },
         {
             "taskName": "Hermes: Deploy",
             "command": "gulp",
-            "args": ["deploy"]
+            "args": ["--gulpfile", "./utilities/deploy.js", "--creative", "${relativeFile}"]
         },
         {
             "taskName": "Hermes: Preview",
             "command": "gulp",
-            "args": ["preview", "--preview", "${relativeFile}"]
+            "args": ["--gulpfile", "./utilities/preview.js", "--creative", "${relativeFile}"]
         },
         {
             "taskName": "Hermes: QR",
             "command": "gulp",
-            "args": ["qr"]
+            "args": ["--gulpfile", "./utilities/qrcode.js", "--creative", "${relativeFile}"]
         }
     ]
 }

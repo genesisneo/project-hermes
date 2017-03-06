@@ -1,0 +1,30 @@
+[
+  {
+    "caption": "Hermes: Browse",
+    "command": "gulp",
+    "args": {
+      "sub_command": "--gulpfile ./utilities/browse.js"
+    }
+  },
+  {
+    "caption": "Hermes: Deploy",
+    "command": "gulp",
+    "args": {
+      "sub_command":["--gulpfile ./utilities/deploy.js --creative ${relativeFile}"
+    }
+  },  
+  {
+    "caption": "Hermes: Preview",
+    "command": "gulp",
+    "args": {
+      "sub_command": "--gulpfile ./utilities/preview.js --creative ${relativeFile}"
+    }
+  },
+  {
+    "caption": "Hermes: QR",
+    "command": "gulp",
+    "args": {
+      "sub_command":"--gulpfile ./utilities/qrcode.js --creative ${relativeFile}"
+    }
+  }
+]
