@@ -46,6 +46,10 @@ This command will split your `preview.html`, separate subscription flow to `defa
 
 This command will create a QR code for you to check your page on your mobile devices. Please note that this will only open `preview.html`.
 
+`$ gulp browse`
+
+This command will open your root crative folder `./creative/` on your default browser, for you to preview, or check other creatives.
+
 ### Before pushing:
 ------
 

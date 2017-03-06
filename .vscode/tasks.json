@@ -1,0 +1,29 @@
+{
+    "version": "0.1.0",
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "isShellCommand": true,
+    "echoCommand": true,
+    "tasks": [
+        {
+            "taskName": "Hermes: Browse",
+            "command": "gulp",
+            "args": ["browse"]
+        },
+        {
+            "taskName": "Hermes: Deploy",
+            "command": "gulp",
+            "args": ["deploy"]
+        },
+        {
+            "taskName": "Hermes: Preview",
+            "command": "gulp",
+            "args": ["preview", "--preview", "${relativeFile}"]
+        },
+        {
+            "taskName": "Hermes: QR",
+            "command": "gulp",
+            "args": ["qr"]
+        }
+    ]
+}

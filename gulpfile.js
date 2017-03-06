@@ -15,9 +15,9 @@ var config = require('./config.json'),
 var assetsPath = './' + config.creatives + '/' + config.creativeName + '/assets';
 var creativePath = './' + config.creatives + '/' + config.creativeName + '/' + config.country + '/' + config.operatorId;
 var osInterface = require('os').networkInterfaces();
-var userIpAddress = Object.keys(osInterface)
-    .map(x => osInterface[x].filter(x => x.family === 'IPv4' && !x.internal)[0])
-    .filter(x => x)[0].address;
+var userIpAddress = Object.keys(osInterface).map(function (x) {
+    return osInterface[x].filter(function (x) { return x.family === 'IPv4' && !x.internal; })[0];
+    }).filter(function (x) { return x; })[0].address;
 
 // task: default
 
@@ -90,6 +90,15 @@ gulp.task('qr', function() {
         + '&creatives=' + config.creatives + '&creativename=' + config.creativeName
         + '&country=' + config.country + '&operatorid=' + config.operatorId
         + '&previewhtml=' + config.previewHtml;
+    gulp.src('')
+        .pipe(open(options));
+});
+
+// task: browse
+
+gulp.task('browse', function() {
+    var options = {};
+    options['uri'] = 'http://' + userIpAddress + ':' + config.port + '/' + config.creatives;
     gulp.src('')
         .pipe(open(options));
 });
