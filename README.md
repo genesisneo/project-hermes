@@ -15,7 +15,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 }
 ```
 
-### Where:
+### :book: Where:
 
 * `port`: your prefered port
 * `creative`: creative folder, no need to change this
@@ -25,7 +25,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 ### Default
 
-```sh
+```bash
 $ gulp
 ```
 
@@ -33,7 +33,7 @@ Default, this will create the server, watch for file changes and reload the page
 
 ### Deploy
 
-```sh
+```bash
 $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -41,7 +41,7 @@ This command will split your `preview.html`, separate subscription flow to `defa
 
 ### Preview
 
-```sh
+```bash
 $ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -49,7 +49,7 @@ This command will open your current open file in your default browser. This only
 
 ### QR Code
 
-```sh
+```bash
 $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -57,7 +57,7 @@ This command will create a QR code for you to check your page on your mobile dev
 
 ### Browse
 
-```sh
+```bash
 $ gulp --gulpfile ./utilities/browse.js
 ```
 
@@ -73,17 +73,17 @@ Check your `default.html` and `index.html` before you commit you page on the LPP
 
 ### Visual Studio Code
 
-Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press `cmd+p` for macOS, `ctrl+p` on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
+Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
 
 ### Sublime Text
 
-This custom commands only works on macOS. Copy all the files on `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you press `cmd+shift+p` and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
+This custom commands only works on macOS. Copy all the files on `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
 
 ```
 {user}/Library/Application Support/Sublime Text 3/Packages/User
 ```
 
-### Where:
+### :book: Where:
 
 * `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
@@ -91,3 +91,5 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 ------
 
 If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo) and of course here in GitHub [@genesisneo](https://github.com/genesisneo). Thank you.
+
+<center>:heart:</center>
