@@ -1,5 +1,5 @@
 # Project Hermes
-Used for creating First Screen (1Screen) LPP landing page.
+Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 ## How to setup:
 ------
@@ -8,7 +8,7 @@ Used for creating First Screen (1Screen) LPP landing page.
 * Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh)
 * Open your terminal and type `npm install`
 * Create a new file on `root` name `./config.json` and copy the following:
-```
+```json
 {
     "port" : "2727",
     "creatives" : "creatives"
@@ -25,7 +25,7 @@ Used for creating First Screen (1Screen) LPP landing page.
 
 ### Default
 
-```
+```sh
 $ gulp
 ```
 
@@ -33,7 +33,7 @@ Default, this will create the server, watch for file changes and reload the page
 
 ### Deploy
 
-```
+```sh
 $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -41,7 +41,7 @@ This command will split your `preview.html`, separate subscription flow to `defa
 
 ### Preview
 
-```
+```sh
 $ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -49,7 +49,7 @@ This command will open your current open file in your default browser. This only
 
 ### QR Code
 
-```
+```sh
 $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
@@ -57,7 +57,7 @@ This command will create a QR code for you to check your page on your mobile dev
 
 ### Browse
 
-```
+```sh
 $ gulp --gulpfile ./utilities/browse.js
 ```
 
@@ -90,4 +90,4 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 ## Question:
 ------
 
-If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo).
+If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo) and of course here in GitHub [@genesisneo](https://github.com/genesisneo). Thank you.
