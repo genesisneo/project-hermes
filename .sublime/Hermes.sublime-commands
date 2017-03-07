@@ -1,30 +1,30 @@
 [
   {
     "caption": "Hermes: Browse",
-    "command": "gulp",
+    "command": "hermes",
     "args": {
-      "sub_command": "--gulpfile ./utilities/browse.js"
+      "sub_command": "browse"
     }
   },
   {
     "caption": "Hermes: Deploy",
-    "command": "gulp",
+    "command": "hermes",
     "args": {
-      "sub_command":["--gulpfile ./utilities/deploy.js --creative ${relativeFile}"
+      "sub_command": "deploy"
     }
-  },  
+  },
   {
     "caption": "Hermes: Preview",
-    "command": "gulp",
+    "command": "hermes",
     "args": {
-      "sub_command": "--gulpfile ./utilities/preview.js --creative ${relativeFile}"
+      "sub_command": "preview"
     }
   },
   {
     "caption": "Hermes: QR",
-    "command": "gulp",
+    "command": "hermes",
     "args": {
-      "sub_command":"--gulpfile ./utilities/qrcode.js --creative ${relativeFile}"
+      "sub_command": "qr"
     }
   }
 ]
