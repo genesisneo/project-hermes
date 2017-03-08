@@ -1,8 +1,8 @@
 # Project Hermes
 Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
-## How to setup:
-------
+## :red_circle: How to setup:
+
 * Download, Fork, or Clone this repo
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/)
 * Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh)
@@ -20,8 +20,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 * `port`: your prefered port
 * `creative`: creative folder, no need to change this
 
-## Commands:
-------
+## :red_circle: Commands:
 
 ### Default
 
@@ -63,13 +62,11 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root crative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
-## Before pushing:
-------
+## :red_circle: Before pushing:
 
 Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file.
 
-## Plugins:
-------
+## :red_circle: Plugins:
 
 ### Visual Studio Code
 
@@ -87,9 +84,8 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 
 * `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
-## Question:
-------
+## :red_circle: Question:
 
 If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo) and of course here in GitHub [@genesisneo](https://github.com/genesisneo). Thank you.
 
-<center>:heart:</center>
+<p align="center">:heart:</p>
