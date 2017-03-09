@@ -38,13 +38,13 @@ gulp.task('copy', function() {
 });
 
 gulp.task('default', function() {
-    var index = process.argv.indexOf("--creative");
+    var index = process.argv.indexOf('--creative');
     if (index != -1) {
         gulpParameters = process.argv[index +1];
         return runSequence('split', 'copy');
     }
     else {
-        gulpParameters = "Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html";
+        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html';
         return console.log(gulpParameters);
     }
 });
