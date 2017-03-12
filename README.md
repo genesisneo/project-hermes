@@ -28,7 +28,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 $ gulp
 ```
 
-Default, this will create the server, watch for file changes and reload the page. Please note to keep this is the background.
+Default, this will create the server, watch for file changes and reload the page. Please note to keep this running in the background.
 
 ### Deploy
 
@@ -44,7 +44,7 @@ This command will split your `preview.html`, separate subscription flow to `defa
 $ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
-This command will open your current open file in your default browser. This only works on the following pages `default.html`, `index.html`, and `preview.html`.
+This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
 
 ### QR Code
 
@@ -52,7 +52,7 @@ This command will open your current open file in your default browser. This only
 $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
-This command will create a QR code for you to check your page on your mobile devices. Please note that this will only open `preview.html`.
+This command will generate a QR code for you to check your page on your mobile devices. Please note that this will only open your `preview.html`.
 
 ### Browse
 
@@ -64,7 +64,7 @@ This command will open your root crative folder `./creative/` on your default br
 
 ## :information_source: Before pushing:
 
-Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file.
+Check your `default.html` and `index.html` before you commit your page on the LPP, make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file anymore.
 
 ## :information_source: Plugins:
 
@@ -74,19 +74,19 @@ Custom commands for this editor is ready to use, just open this repo on your Vis
 
 ### Sublime Text
 
-This custom commands only works on macOS. Copy all the files on `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
+This custom commands only works on macOS. Copy all the files on `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
 
 ```
-{user}/Library/Application Support/Sublime Text 3/Packages/User
+{home}/Library/Application Support/Sublime Text 3/Packages/User
 ```
 
 ### :book: Where:
 
-* `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
+* `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
 ## :information_source: Notes:
 
-For Windows user only. Once you've install [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) globally & locally, you need to add their paths to Windows Environment. To do this, search for `Environment variables` on your Windows and add the following:
+For Windows user only. Once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment variables` on your Windows device and add the following:
 
 | Variable  | Value                             |
 |-----------|-----------------------------------|
