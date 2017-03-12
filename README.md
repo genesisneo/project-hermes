@@ -1,12 +1,12 @@
 # Project Hermes
 Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
-## :red_circle: How to setup:
+## :information_source: How to setup:
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
-* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For Windows user, please read [notes](#red_circle-notes) below.
-* Open terminal on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For Windows user, please read [notes](#red_circle-notes) below.
+* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For Windows user, please read [notes](#notes) below.
+* Open terminal on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For Windows user, please read [notes](#notes) below.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```json
 {
@@ -20,7 +20,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 * `port`: your prefered port
 * `creative`: your creative folder
 
-## :red_circle: Commands:
+## :information_source: Commands:
 
 ### Default
 
@@ -62,15 +62,15 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root crative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
-## :red_circle: Before pushing:
+## :information_source: Before pushing:
 
 Check your `default.html` and `index.html` before you commit you page on the LPP, make sure that the text are linked from the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file.
 
-## :red_circle: Plugins:
+## :information_source: Plugins:
 
 ### Visual Studio Code
 
-Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read [notes](#red_circle-notes) below.
+Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read [notes](#notes) below.
 
 ### Sublime Text
 
@@ -84,16 +84,17 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 
 * `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
-## :red_circle: Notes:
+<span name="notes"></span>
+## :information_source: Notes:
 
-For Windows user only. Once youve install [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) globally & locally, you need to add their paths to Windows Environment. To do this, search for `Environment variables` on your Windows and add the following:
+For Windows user only. Once you've install [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) globally & locally, you need to add their paths to Windows Environment. To do this, search for `Environment variables` on your Windows and add the following:
 
 | Variable  | Value                             |
 |-----------|-----------------------------------|
 | NODE_PATH | %AppData%\npm\node_modules        |
 | GULP_PATH | %USERPROFILE%\AppData\Roaming\npm |
 
-## :red_circle: Question:
+## :information_source: Question:
 
 If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo) and of course here in GitHub [@genesisneo](https://github.com/genesisneo). Thank you.
 
