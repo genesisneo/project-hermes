@@ -2,26 +2,29 @@
     "version": "0.1.0",
     "showOutput": "always",
     "suppressTaskName": true,
-    "isShellCommand": true,
     "echoCommand": true,
     "tasks": [
         {
             "taskName": "Hermes: Browse",
+            "isShellCommand": true,
             "command": "gulp",
             "args": ["--gulpfile", "./utilities/browse.js"]
         },
         {
             "taskName": "Hermes: Deploy",
+            "isShellCommand": true,
             "command": "gulp",
             "args": ["--gulpfile", "./utilities/deploy.js", "--creative", "${relativeFile}"]
         },
         {
             "taskName": "Hermes: Preview",
+            "isShellCommand": true,
             "command": "gulp",
             "args": ["--gulpfile", "./utilities/preview.js", "--creative", "${relativeFile}"]
         },
         {
             "taskName": "Hermes: QR",
+            "isShellCommand": true,
             "command": "gulp",
             "args": ["--gulpfile", "./utilities/qrcode.js", "--creative", "${relativeFile}"]
         }
