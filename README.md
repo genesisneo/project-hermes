@@ -84,8 +84,7 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 
 * `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
-<span name="notes"></span>
-## :information_source: Notes:
+## <a id="notes" name="notes"></span>:information_source: Notes:
 
 For Windows user only. Once you've install [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) globally & locally, you need to add their paths to Windows Environment. To do this, search for `Environment variables` on your Windows and add the following:
 
