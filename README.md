@@ -5,8 +5,8 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
-* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For Windows user, please read [notes](#notes) below.
-* Open terminal on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For Windows user, please read [notes](#notes) below.
+* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For Windows user, please read notes below.
+* Open terminal on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For Windows user, please read notes below.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```json
 {
@@ -70,7 +70,7 @@ Check your `default.html` and `index.html` before you commit you page on the LPP
 
 ### Visual Studio Code
 
-Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read [notes](#notes) below.
+Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read notes below.
 
 ### Sublime Text
 
@@ -84,7 +84,7 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 
 * `user`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
-## <a id="notes" name="notes"></span>:information_source: Notes:
+## :information_source: Notes:
 
 For Windows user only. Once you've install [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) globally & locally, you need to add their paths to Windows Environment. To do this, search for `Environment variables` on your Windows and add the following:
 
