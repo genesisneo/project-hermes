@@ -1,7 +1,7 @@
 # Project Hermes
 Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
-## :information_source: How to setup:
+## How to setup:
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
@@ -15,12 +15,16 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 }
 ```
 
-### :book: Where:
+> Where:
+> * `port`: your prefered port
+> * `creative`: your creative folder
 
-* `port`: your prefered port
-* `creative`: your creative folder
+* Go back to your terminal and type `gulp --gulpfile ./utilities/modules.js` to update [connect-livereload](https://github.com/intesso/connect-livereload) module used for reloading the page when you change any file while the server is running.
+* Once everything is done, you can now start the server by typing `gulp` on your terminal.
 
-## :information_source: Commands:
+---
+
+## Commands:
 
 ### Default
 
@@ -28,7 +32,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 $ gulp
 ```
 
-Default, this will create the server, watch for file changes and reload the page. Please note to keep this running in the background.
+Default, this will create the server, watch for file changes and reload the page if necessary. Please note to keep this running in the background.
 
 ### Deploy
 
@@ -36,7 +40,7 @@ Default, this will create the server, watch for file changes and reload the page
 $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
-This command will split your `preview.html`, separate subscription flow to `default.html` and creative to `index.html`.
+This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`.
 
 ### Preview
 
@@ -52,7 +56,7 @@ This command will open your current opened file in your default browser. This on
 $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
-This command will generate a QR code for you to check your page on your mobile devices. Please note that this will only open your `preview.html`.
+This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will work on `preview.html`.
 
 ### Browse
 
@@ -62,15 +66,27 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root crative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
-## :information_source: Before pushing:
+### Module
 
-Check your `default.html` and `index.html` before you commit your page on the LPP, make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include `default.html` file anymore.
+```bash
+$ gulp --gulpfile ./utilities/modules.js
+```
 
-## :information_source: Plugins:
+This command can only be used once. Run this command after you type `npm i -g gulp` and `npm i`. This will update [connect-livereload](https://github.com/intesso/connect-livereload) module to include `./livereload.js` and `./utilities/states.js` temporarily on the page.
+
+---
+
+## Before pushing:
+
+Check your `default.html` and `index.html` before you commit them to LPP repo. Make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include or copy `default.html` file anymore.
+
+---
+
+## Plugins:
 
 ### Visual Studio Code
 
-Custom commands for this editor is ready to use, just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read notes below.
+Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read notes below.
 
 ### Sublime Text
 
@@ -80,21 +96,26 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 {home}/Library/Application Support/Sublime Text 3/Packages/User
 ```
 
-### :book: Where:
+> Where:
+> * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
 
-* `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
+---
 
-## :information_source: Notes:
+## Notes:
 
-For Windows user only. Once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment variables` on your Windows device and add the following:
+For Windows user only. Once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment Variables` on your Windows device and add the following:
 
 | Variable  | Value                             |
 |-----------|-----------------------------------|
 | NODE_PATH | %AppData%\npm\node_modules        |
 | GULP_PATH | %USERPROFILE%\AppData\Roaming\npm |
 
-## :information_source: Question:
+---
+
+## Question:
 
 If you have question, you can always contact me on Twitter [@genesis_neo](https://twitter.com/genesis_neo) and of course here in GitHub [@genesisneo](https://github.com/genesisneo). Thank you.
+
+---
 
 <p align="center">-=[ :heart: ]=-</p>
