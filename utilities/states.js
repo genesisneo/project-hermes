@@ -40,7 +40,7 @@ window.onload = function(){
                 "- Number Entry: \t\t\tstate('show-numberentry')\n" +
                 "- PIN Entry: \t\t\t\tstate('show-pinentry')\n" +
                 "- MO Message: \t\t\t\tstate('show-mo')\n" +
-                "- Congrats: \t\t\t\tstate('show-show-congrats')\n" +
+                "- Congrats: \t\t\t\tstate('show-congrats')\n" +
                 "- Error: \t\t\t\t\tstate('show-error')"
             );
         }
@@ -50,6 +50,24 @@ window.onload = function(){
             }
             addClass(container, string);
         }
+    }
+
+    window.animation = function(boolean) {
+
+        if (boolean === false) {
+            addClass(container, 'stop-all-animations');
+        }
+        else if (boolean === true) {
+            removeClass(container, 'stop-all-animations');
+        }
+        else {
+            console.log(
+                "You can use the following command:\n\n" +
+                "- Animations On: \t\t\tanimation(true)\n" +
+                "- Animations Off: \t\t\tanimation(false)\n"
+            );
+        }
+
     }
 
 }
