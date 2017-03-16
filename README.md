@@ -40,7 +40,7 @@ Default, this will create the server, watch for file changes and reload the page
 $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
 ```
 
-This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`.
+This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read `Before pushing` below.
 
 ### Preview
 
@@ -78,7 +78,7 @@ This command can only be used once. Run this command after you type `npm i -g gu
 
 ## Before pushing:
 
-Check your `default.html` and `index.html` before you commit them to LPP repo. Make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include or copy `default.html` file anymore.
+Check your `default.html` and `index.html` before you commit them to LPP repo. Make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` or `KeyToHappiness/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include or copy `default.html` file anymore.
 
 ---
 

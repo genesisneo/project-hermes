@@ -14,7 +14,7 @@ gulp.task('split', function() {
     var creativePath = '../' + gulpParameters.replace('preview.html', '');
     return gulp.src('../' + gulpParameters)
         .pipe(dom(function() {
-            return this.querySelectorAll('.holder')[0].innerHTML;
+            return this.querySelectorAll('#subscr-flow-states')[0].innerHTML;
         }))
         .pipe(whitespace({
             tabsToSpaces: 4,
@@ -28,7 +28,7 @@ gulp.task('copy', function() {
     var creativePath = '../' + gulpParameters.replace('preview.html', '');
     return gulp.src('../' + gulpParameters)
         .pipe(cheerio(function ($, file) {
-            $('.holder').text('[SFC]');
+            $('#subscr-flow-states').text('[SFC]');
         }))
         .pipe(htmlmin({
             decodeEntities: true
