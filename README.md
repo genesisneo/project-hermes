@@ -26,7 +26,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 ## Commands:
 
-### Default
+**Default**
 
 ```bash
 $ gulp
@@ -34,7 +34,7 @@ $ gulp
 
 Default, this will create the server, watch for file changes and reload the page if necessary. Please note to keep this running in the background.
 
-### Deploy
+**Deploy**
 
 ```bash
 $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
@@ -42,7 +42,7 @@ $ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_12
 
 This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read `Before pushing` below.
 
-### Preview
+**Preview**
 
 ```bash
 $ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html
@@ -50,7 +50,7 @@ $ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_1
 
 This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
 
-### QR Code
+**QR Code**
 
 ```bash
 $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
@@ -58,7 +58,7 @@ $ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_12
 
 This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will work on `preview.html`.
 
-### Browse
+**Browse**
 
 ```bash
 $ gulp --gulpfile ./utilities/browse.js
@@ -66,7 +66,7 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root crative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
-### Module
+**Module**
 
 ```bash
 $ gulp --gulpfile ./utilities/modules.js
@@ -84,11 +84,11 @@ Check your `default.html` and `index.html` before you commit them to LPP repo. M
 
 ## Plugins:
 
-### Visual Studio Code
+**Visual Studio Code**
 
 Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read notes below.
 
-### Sublime Text
+**Sublime Text**
 
 This custom commands only works on macOS. Copy all the files on `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
 
@@ -98,6 +98,43 @@ This custom commands only works on macOS. Copy all the files on `.sublime` folde
 
 > Where:
 > * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US).
+
+---
+
+## Console function:
+
+**State**
+
+```bash
+> state()
+```
+
+You can use the following command:
+
+| State                 | Command                           |
+|-----------------------|-----------------------------------|
+| Operator Selection:   | state('show-operatorselection')   |
+| Default:              | state('show-directsubscribe')     |
+| Double Confirmation:  | state('show-doubleconfirmation')  |
+| Subscription Polling: | state('show-subscriptionpolling') |
+| Number Entry:         | state('show-numberentry')         |
+| PIN Entry:            | state('show-pinentry')            |
+| MO Message:           | state('show-mo')                  |
+| Congrats:             | state('show-congrats')            |
+| Error:                | state('show-error')               |
+
+**Animation**
+
+```bash
+> animation()
+```
+
+You can use the following command:
+
+| Animation State | Command          |
+|-----------------|------------------|
+| Animations On:  | animation(true)  |
+| Animations Off: | animation(false) |
 
 ---
 
