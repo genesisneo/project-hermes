@@ -1,5 +1,5 @@
 
-window.onload = function(){
+(function() {
 
     function hasClass(el, name) {
         return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
@@ -70,4 +70,4 @@ window.onload = function(){
 
     }
 
-}
+})();
