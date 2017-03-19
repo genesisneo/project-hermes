@@ -64,9 +64,17 @@
     </script>
 
     <style>
-        body {
-            margin: 0px;
-            padding: 0px;
+        html, body {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #673ab7;
+            background: -webkit-linear-gradient(-45deg,  #673ab7 0%,#ff5252 100%);
+            background: -moz-linear-gradient(-45deg,  #673ab7 0%, #ff5252 100%);
+            background: linear-gradient(145deg,  #673ab7 0%,#ff5252 100%);
         }
         .container {
             position: absolute;
@@ -74,6 +82,7 @@
             left: calc(50% - 128px);
             width: 256px;
             height: 256px;
+            outline: 16px solid #fff;
         }
     </style>
 
