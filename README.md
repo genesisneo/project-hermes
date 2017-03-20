@@ -8,8 +8,8 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
-* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For Windows user, please read *Notes* below.
-* Open terminal or shell on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For Windows user, please read *Notes* below.
+* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For macOS & Windows user, please read *Notes* below.
+* Open terminal or shell on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For macOS & Windows user, please read *Notes* below.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```json
 {
@@ -91,11 +91,11 @@ Make sure that there is no other content inside `#subscr-flow-states` other than
 
 **Visual Studio Code**
 
-Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For Windows user, please read *Notes* below.
+Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read *Notes* below.
 
 **Sublime Text**
 
-This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`.
+This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read *Notes* below.
 
 ```
 /Users/{home}/Library/Application Support/Sublime Text 3/Packages/User
@@ -149,7 +149,15 @@ You can use `animation()`, `animation('?')`, or `animation('help')` to show this
 
 ## Notes:
 
-For Windows user, once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment Variables` on your Windows device and add the following:
+**macOS**
+
+Make sure you have Xcode on your device.  if you do not have Xcode installed on your device and you do not wish to download the ~4.5GB file, you can install the Command Line Tools.
+
+To do this, open your terminal and type `xcode-select --install` and press return, a popup window will appear that asks: “The xcode-select command requires the command line developer tools. Would you like to install the tools now?” choose to confirm this by clicking “Install”, then agree to the Terms of Service when requested. For troubleshooting, you can read it [here](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
+
+**Windows**
+
+Once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment Variables` on your Windows device and add the following:
 
 | Variable  | Value                             |
 |-----------|-----------------------------------|
