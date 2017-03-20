@@ -25,7 +25,7 @@ gulp.task('default', function() {
         return runSequence('preview');
     }
     else {
-        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html';
+        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/preview.js --creative Previews/creativeName/xx/_123/preview.html';
         return console.log(gulpParameters);
     }
 });

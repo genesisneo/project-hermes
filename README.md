@@ -14,13 +14,13 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 ```json
 {
     "port" : "2727",
-    "creatives" : "creatives"
+    "creatives" : "Previews"
 }
 ```
 
 > Where:
 > * `port`: your prefered port
-> * `creative`: your creative folder
+> * `creatives`: your creatives folder
 
 * Go back to your terminal or shell and type `gulp --gulpfile ./utilities/modules.js` to update [connect-livereload](https://github.com/intesso/connect-livereload) module used for reloading the page when you change any file while the server is running.
 * Once everything is done, you can now start the server by typing `gulp` on your terminal.
@@ -40,7 +40,7 @@ Default, this will create the server, watch for file changes and reload the page
 **Deploy**
 
 ```bash
-$ gulp --gulpfile ./utilities/deploy.js --creative creatives/creativeName/XX/_123/preview.html
+$ gulp --gulpfile ./utilities/deploy.js --creative Previews/creativeName/xx/_123/preview.html
 ```
 
 This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read *Before pushing* below.
@@ -48,7 +48,7 @@ This command will split your `preview.html`. Separate subscription flow to `defa
 **Preview**
 
 ```bash
-$ gulp --gulpfile ./utilities/preview.js --creative creatives/creativeName/XX/_123/preview.html
+$ gulp --gulpfile ./utilities/preview.js --creative Previews/creativeName/xx/_123/preview.html
 ```
 
 This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
@@ -56,7 +56,7 @@ This command will open your current opened file in your default browser. This on
 **QR Code**
 
 ```bash
-$ gulp --gulpfile ./utilities/qrcode.js --creative creatives/creativeName/XX/_123/preview.html
+$ gulp --gulpfile ./utilities/qrcode.js --creative Previews/creativeName/xx/_123/preview.html
 ```
 
 This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will only work on `preview.html`.
@@ -81,7 +81,7 @@ This command can only be used once. Run this command after you type `npm i -g gu
 
 ## Before pushing:
 
-Check your `default.html` and `index.html` before you commit them to LPP repo. Make sure that the text are linked to the LPP database. You can use `UpgradeYourself/TR/_300/` or `KeyToHappiness/TR/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include or copy `default.html` file anymore.
+Check your `default.html` and `index.html` before you commit them to LPP repo. Make sure that the text are linked to the LPP database. You can use `UpgradeYourself/tr/_300/` or `KeyToHappiness/tr/_300/` as reference. If subscription flow exist on `SubscriptionState` folder on LPP repo, you don't need to include or copy `default.html` file anymore.
 
 Make sure that there is no other content inside `#subscr-flow-states` other than the flow states. Any elements inside this container will be removed once your page reach Tech Team integration.
 
