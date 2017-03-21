@@ -8,8 +8,8 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
-* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh). For macOS & Windows user, please read *Notes* below.
-* Open terminal or shell on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For macOS & Windows user, please read *Notes* below.
+* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh) but make sure `system` use [node.js ^6.0.0](https://nodejs.org/en/). For macOS & Windows user, please read "*Notes*" below.
+* Open terminal or shell on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For macOS & Windows user, please read "*Notes*" below.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```json
 {
@@ -91,11 +91,11 @@ Make sure that there is no other content inside `#subscr-flow-states` other than
 
 **Visual Studio Code**
 
-Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read *Notes* below.
+Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read "*Notes*" below.
 
 **Sublime Text**
 
-This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read *Notes* below.
+This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
 
 ```
 /Users/{home}/Library/Application Support/Sublime Text 3/Packages/User
@@ -106,7 +106,7 @@ This custom commands only works on macOS. Copy all the files inside `.sublime` f
 
 ---
 
-## Console function:
+## Browser console function:
 
 **State**
 
