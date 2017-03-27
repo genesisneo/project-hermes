@@ -104,7 +104,7 @@ This custom commands only works on macOS. Copy all the files inside `.sublime` f
 > Where:
 > * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US). Example: `/Users/g/Library/Application Support/Sublime Text 3/Packages/User/Hermes.py`
 
-Can't find or see `.sublime` & `.vscode` folder on your macOS device?
+Can't find or see `.sublime` & `.vscode` folder on your macOS device?<br>
 Open your terminal and type the following command:
 
 ```bash
