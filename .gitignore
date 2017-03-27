@@ -38,3 +38,6 @@ jspm_packages
 
 # Configuration file
 config.json
+
+# Data folder
+data/
