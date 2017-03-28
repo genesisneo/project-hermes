@@ -91,23 +91,24 @@
             });
 
             var matchText = function(node, regex, callback, excludeElements) {
-                excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'input', 'label']);
+                excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
                 var child = node.firstChild;
-                if (child != null) {
-                    do {
-                        switch (child.nodeType) {
-                            case 1:
-                                if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
-                                    continue;
-                                }
-                                matchText(child, regex, callback, excludeElements);
-                                break;
-                            case 3:
-                                child.data = child.data.replace(regex, callback);
-                                break;
-                        }
-                    } while (!!(child = child.nextSibling));
+                if(!child) {
+                    return node;
                 }
+                do {
+                    switch (child.nodeType) {
+                        case 1:
+                            if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
+                                continue;
+                            }
+                            matchText(child, regex, callback, excludeElements);
+                            break;
+                        case 3:
+                            child.data = child.data.replace(regex, callback);
+                            break;
+                    }
+                } while (!!(child = child.nextSibling));
                 return node;
             };
 
