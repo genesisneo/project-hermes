@@ -1,6 +1,8 @@
 
 (function() {
 
+    // --- utilities
+
     function hasClass(el, name) {
         return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
     }
@@ -15,6 +17,8 @@
         }
     }
 
+    // --- states controls
+
     var pageStates = [
         'show-operatorselection',
         'show-directsubscribe',
@@ -27,9 +31,7 @@
         'show-error'
     ];
     var container = document.getElementById('container');
-
     window.state = function(string) {
-
         if (string == null || string == '' || string == '?' || string == 'help') {
             console.log(
                 "You can use the following command:\n\n" +
@@ -52,8 +54,9 @@
         }
     }
 
-    window.animation = function(boolean) {
+    // --- animation controls
 
+    window.animation = function(boolean) {
         if (boolean === false) {
             addClass(container, 'stop-all-animations');
         }
@@ -67,6 +70,52 @@
                 "- Animations Off: \t\t\tanimation(false)\n"
             );
         }
+    }
+
+    // --- dynamic contents controls
+
+    if (window.location.pathname.indexOf('index.html') != -1 || window.location.pathname.indexOf('default.html') != -1) {
+
+        var jsonRequest = new XMLHttpRequest();
+        jsonRequest.open('GET', '../../../../data/texts.json');
+        jsonRequest.setRequestHeader("Content-Type", "application/json");
+        jsonRequest.onload = function() {
+
+            // http://stackoverflow.com/questions/43044137
+
+            var jsonData = JSON.parse(jsonRequest.responseText);
+
+            var data = {};
+            jsonData.map(function(d) {
+                data[d.PageTextKeyName] = d.PageTextValueName;
+            });
+
+            var matchText = function(node, regex, callback, excludeElements) {
+                excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'input', 'label']);
+                var child = node.firstChild;
+                do {
+                    switch (child.nodeType) {
+                        case 1:
+                            if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
+                                continue;
+                            }
+                            matchText(child, regex, callback, excludeElements);
+                            break;
+                        case 3:
+                            child.data = child.data.replace(regex, callback);
+                            break;
+                    }
+                } while (!!(child = child.nextSibling));
+                return node;
+            };
+
+            matchText(document.body, /\[(.*?)\]/gi, function(match) {
+                var key = match.substring(1, match.length-1);
+                return (!!data[key]) ? data[key] : match;
+            });
+
+        }
+        jsonRequest.send();
 
     }
 
