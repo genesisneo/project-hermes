@@ -93,19 +93,21 @@
             var matchText = function(node, regex, callback, excludeElements) {
                 excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'input', 'label']);
                 var child = node.firstChild;
-                do {
-                    switch (child.nodeType) {
-                        case 1:
-                            if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
-                                continue;
-                            }
-                            matchText(child, regex, callback, excludeElements);
-                            break;
-                        case 3:
-                            child.data = child.data.replace(regex, callback);
-                            break;
-                    }
-                } while (!!(child = child.nextSibling));
+                if (child != null) {
+                    do {
+                        switch (child.nodeType) {
+                            case 1:
+                                if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
+                                    continue;
+                                }
+                                matchText(child, regex, callback, excludeElements);
+                                break;
+                            case 3:
+                                child.data = child.data.replace(regex, callback);
+                                break;
+                        }
+                    } while (!!(child = child.nextSibling));
+                }
                 return node;
             };
 
