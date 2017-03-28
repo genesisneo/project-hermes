@@ -12,13 +12,13 @@ class Hermes(sublime_plugin.WindowCommand):
     def run_command_on_creative_suffix(self, command_function, file_to_match = ".*"):
         view = self.window.active_view()
         file_name = view.file_name()
-        pattern = "(.*?)(Previews)\/(.*)\/" + file_to_match
+        pattern = "(.*?)(Creatives)\/(.*)\/" + file_to_match
         match = re.search(pattern, file_name, re.IGNORECASE)
         if match:
 
-            # print("match 0: %s" % (match.group(0))) # /Users/g/GitHub/project-hermes/Previews/KeyToHappiness/TR/_300/preview.html
+            # print("match 0: %s" % (match.group(0))) # /Users/g/GitHub/project-hermes/Creatives/KeyToHappiness/TR/_300/preview.html
             # print("match 1: %s" % (match.group(1))) # /Users/g/GitHub/project-hermes/
-            # print("match 2: %s" % (match.group(2))) # Previews
+            # print("match 2: %s" % (match.group(2))) # Creatives
             # print("match 3: %s" % (match.group(3))) # KeyToHappiness/TR/_300
 
             view.run_command("save")

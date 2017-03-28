@@ -30,7 +30,7 @@ gulp.task('default', function() {
         return runSequence('qr');
     }
     else {
-        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/qrcode.js --creative Previews/creativeName/xx/_123/preview.html';
+        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/qrcode.js --creative Creatives/creativeName/xx/_123/preview.html';
         return console.log(gulpParameters);
     }
 });

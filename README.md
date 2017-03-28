@@ -14,7 +14,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 ```json
 {
     "port" : "2727",
-    "creatives" : "Previews"
+    "creatives" : "Creatives"
 }
 ```
 
@@ -40,7 +40,7 @@ Default, this will create the server, watch for file changes and reload the page
 **Deploy**
 
 ```bash
-$ gulp --gulpfile ./utilities/deploy.js --creative Previews/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/deploy.js --creative Creatives/creativeName/xx/_123/preview.html
 ```
 
 This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read *Before pushing* below.
@@ -48,7 +48,7 @@ This command will split your `preview.html`. Separate subscription flow to `defa
 **Preview**
 
 ```bash
-$ gulp --gulpfile ./utilities/preview.js --creative Previews/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/preview.js --creative Creatives/creativeName/xx/_123/preview.html
 ```
 
 This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
@@ -56,7 +56,7 @@ This command will open your current opened file in your default browser. This on
 **QR Code**
 
 ```bash
-$ gulp --gulpfile ./utilities/qrcode.js --creative Previews/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/qrcode.js --creative Creatives/creativeName/xx/_123/preview.html
 ```
 
 This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will only work on `preview.html`.
