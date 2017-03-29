@@ -74,14 +74,47 @@
 
     // --- dynamic contents controls
 
-    if (window.location.pathname.indexOf('index.html') != -1 || window.location.pathname.indexOf('default.html') != -1) {
+    function getFileName() {
+
+        // when page load, check if url is index ["", "index.html"] or not
+        // ref: http://befused.com/javascript/get-filename-url
+
+        var url = document.location.href;
+        url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+        url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
+        url = url.substring(url.lastIndexOf("/") + 1, url.length);
+        return url;
+
+    }
+
+    var isIndex = getFileName();
+
+    if (isIndex == "" || isIndex == "index.html") {
+
+        // load default.html and attach it to subscr-flow-states div
+        // ref: http://stackoverflow.com/a/17636635/7702792
+
+        function attachdefault() {
+            var sfc = document.getElementById('subscr-flow-states'),
+            pageRequest = new XMLHttpRequest();
+            pageRequest.onreadystatechange = function() { 
+                if (pageRequest.readyState == 4 && pageRequest.status == 200) {
+                    sfc.innerHTML = pageRequest.responseText;
+                }
+            }
+            pageRequest.open("GET", "./default.html", true);
+            pageRequest.setRequestHeader('Content-type', 'text/html');
+            pageRequest.send();
+        }
+        attachdefault();
+
+        // load texts.json and replace [text-here] with correct value
+        // ref: http://stackoverflow.com/a/43044968/7702792
 
         var jsonRequest = new XMLHttpRequest();
         jsonRequest.open('GET', '../../../../data/texts.json');
         jsonRequest.setRequestHeader("Content-Type", "application/json");
         jsonRequest.onload = function() {
-
-            // http://stackoverflow.com/questions/43044137
 
             var jsonData = JSON.parse(jsonRequest.responseText);
 
