@@ -93,6 +93,8 @@ Make sure that there is no other content inside `#subscr-flow-states` other than
 
 Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read "*Notes*" below.
 
+For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4e98d3c0ad1f3e634f474a32d36b9f12).
+
 **Sublime Text**
 
 This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
@@ -112,6 +114,8 @@ $ defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
 Once done, relaunch your Finder by holding <kbd>cmd</kbd>+<kbd>alt</kbd>+right click on the Finder icon from your Dock. You can click [here](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for more information.
+
+For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4963317ec07e9f2b1c95447983f51059).
 
 ---
 
