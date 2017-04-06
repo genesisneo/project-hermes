@@ -17,7 +17,7 @@
     
     <div id="container" class="show-directsubscribe">
         
-        <a href="javascript:Close()" id="mraid-close"></a>
+        <a href="javascript:Close()" id="close"></a>
 
         <div class="creative">
             
@@ -42,7 +42,7 @@
                             <span>Kabul Ediyorum</span>
                         </div>
                         <a href="javascript:void(0)" id="subscribe" class="btn beat subscribe">
-                            <span data-x-role="subscribe-now">Onayliyorum</span>
+                            <span>Onayliyorum</span>
                         </a>
                         <p class="msg">
                             Servis bedeli operatörünüzün düzenlediği fatura kanalıyla veya ön ödemeli hatlarda tl/kr miktarı düşülerek tahsil edilir. MH: <a href="tel:02129873102">02129873102</a>
@@ -52,14 +52,14 @@
                     <!-- doubleconfirmation-->
                     <div id="doubleconfirmation">
                         <div class="icon"></div>
-                        <span data-x-role="subscription-info-double-confirmation" id="double-confirmation-message">
+                        <span id="double-confirmation-message">
                             Hizmet bedeli haftalık 5TL, aylık 20 TL'dir. Kabul etmek için EVET'e tıklayiniz.
                         </span>
                         <a href="javascript:void(0)" id="confirm-no" class="hlf-btn">
-                            <span data-x-role="confirmation-no">Hayır</span>
+                            <span>Hayır</span>
                         </a>
                         <a href="javascript:void(0)" id="confirm" class="beat hlf-btn">
-                            <span data-x-role="confirmation-yes">Evet</span>
+                            <span>Evet</span>
                         </a>
                         <p class="customer-support">Müşteri desteği: <a href="tel:02129873102">02129873102</a></p>
                     </div>
@@ -71,17 +71,17 @@
 
                     <!-- numberentry -->
                     <div id="numberentry">
-                        <label data-x-role="enter-number" for="number" class="entry-message">Cep telefonu numaranızı girin</label>
+                        <label for="number" class="entry-message">Cep telefonu numaranızı girin</label>
                         <input type="tel" id="input-number" maxlength="10" value="5">
                         <div class="disclaimer">
                             Paket haftalık tüm vergiler dahil 5TL, aylık 20TL’dir.<br>
                             Öğrenme Kulübü, doğrudan cep telefonunuzda uzmanlar tarafından özel olarak geliştirilmiş olan geniş bir yelpazedeki yüksek kaliteli kurslar sunan kişisel, birinci sınıf, tümü bir arada eğitim hizmetidir. Dilden, kariyer yeteneklerine; spordan yaşam tarzına kadar her şeyi içeren kategorileriyle Öğrenme Kulübü hareket halindeyken uygun boyutlu, yüksek kaliteli eğitim ihtiyacınızı karşılar!
                         </div>
                         <a href="javascript:void(0)" id="submit-number" class="btn beat">
-                            <span data-x-role="number-entry-submit">Devam</span>
+                            <span>Devam</span>
                         </a>
-                        <div id="already-subscribed-error" class="error" data-x-role="already-subscribed-error">Bu hizmete zaten abonesiniz</div>
-                        <div id="invalid-number-error" class="error" data-x-role="invalid-number-error">Lütfen geçerli bir numara girin</div>
+                        <div id="already-subscribed-error" class="error">Bu hizmete zaten abonesiniz</div>
+                        <div id="invalid-number-error" class="error">Lütfen geçerli bir numara girin</div>
                         <p class="customer-support">
                             Müşteri desteği: <a href="tel:02129873102">02129873102</a>
                         </p>
@@ -92,14 +92,14 @@
                         <div class="disclaimer">
                             Öğrenme Kulübü hizmetine hoş geldiniz. Paket haftalık tüm vergiler dahil 5TL, aylık 20TL’dir. Bakiye yetersizse 1TL taksitle 5 gün tahsil edilecektir. İptal edilmedikçe aboneliğiniz her ay otomatik olarak yenilenecektir. Servisi IPTAL KULUP yazıp 8896 ya göndererek durdurabilirsiniz. Servis süresi bitmeden iptal edildiğinde kalan süre için ücret iadesi yapılmaz, süre sonuna kadar servis kullanılabilir.
                         </div>
-                        <label data-x-role="subscription-info-pin-entry" for="pin" class="entry-message">
+                        <label for="pin" class="entry-message">
                             Aboneliğinizi doğrulamak için pin kodlu bir kısa mesaj alacaksınız. PIN kodunu aşağıya girin:
                         </label>
                         <input type="tel" id="input-pin" maxlength="4">
                         <a href="javascript:void(0)" id="submit-pin" class="btn">
-                            <span data-x-role="pin-entry-submit">Onaylıyorum</span>
+                            <span>Onaylıyorum</span>
                         </a>
-                        <div id="invalid-pin-error" class="error" data-x-role="invalid-pin-error">Yanlış PIN girdiniz</div>
+                        <div id="invalid-pin-error" class="error">Yanlış PIN girdiniz</div>
                         <p class="msg">
                             Servis bedeli operatörünüzün düzenlediği fatura kanalıyla veya ön ödemeli hatlarda tl/kr miktarı düşülerek tahsil edilir. MH: <a href="tel:02129873102" style="color:#333;">02129873102</a>
                         </p>
@@ -107,7 +107,7 @@
                     
                     <!-- congrats-->
                     <div id="congrats">
-                        <h3 data-x-role="congrats">
+                        <h3>
                             <span class="checkIcon"></span>
                             Tebrikler! Aboneliğiniz başlamıştır
                         </h3>
@@ -125,7 +125,7 @@
 
                 </div>
 
-                <div class="customer-support">
+                <div id="customer-support-address" class="customer-support">
                     Mobitrans Digital Turkey, Merkez Mah,<br>Hasat Sokak No 52, Sisli, Istanbul
                 </div>
 
