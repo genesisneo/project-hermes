@@ -31,10 +31,17 @@
                 return parameters;
             }
 
-            var ipAddress, port, creatives, creativeName, country, operatorId, previewHtml, url;
+            var ipAddress, port, creatives, service, creativeName, country, operatorId, previewHtml, url;
             var params = getSearchParameters();
 
-            // ?ipaddress=&port=&creatives=&creativename=&country=&operatorid=&previewhtml=
+            // ?ipaddress=
+            // &port=
+            // &creatives=
+            // &service=
+            // &creativename=
+            // &country=
+            // &operatorid=
+            // &previewhtml=
 
             if (params.ipaddress)
                 ipAddress = params.ipaddress;
@@ -42,6 +49,8 @@
                 port = params.port;
             if (params.creatives)
                 creatives = params.creatives;
+            if (params.service)
+                service = params.service;
             if (params.creativename)
                 creativeName = params.creativename;
             if (params.country)
@@ -51,9 +60,9 @@
             if (params.previewhtml)
                 previewHtml = params.previewhtml;
 
-            url = "http://" + ipAddress + ":" + port + "/" + creatives + "/" + creativeName + "/"+country + "/" + operatorId + "/" + previewHtml;
+            url = "http://" + ipAddress + ":" + port + "/" + creatives + "/" + service + "/" + creativeName + "/"+country + "/" + operatorId + "/" + previewHtml;
 
-            if (!params.ipaddress || !params.port || !params.creatives || !params.creativename || !params.country || !params.operatorid || !params.previewhtml) {
+            if (!params.ipaddress || !params.port || !params.creatives || !params.service || !params.creativename || !params.country || !params.operatorid || !params.previewhtml) {
                 url = "http://obtera.com";
                 alert('There is something wrong with the queries.\nPlease check and try it again.');
             }

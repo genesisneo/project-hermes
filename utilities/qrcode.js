@@ -16,9 +16,9 @@ gulp.task('qr', function() {
     var options = {};
     options['uri'] = 'http://' + userIpAddress + ':' + config.port
         + '/qr.html?ipaddress=' + userIpAddress + '&port=' + config.port
-        + '&creatives=' + splitParameters[0] + '&creativename=' + splitParameters[1]
-        + '&country=' + splitParameters[2] + '&operatorid=' + splitParameters[3]
-        + '&previewhtml=' + splitParameters[4];
+        + '&creatives=' + splitParameters[0] + '&service=' + splitParameters[1]
+        + '&creativename=' + splitParameters[2] + '&country=' + splitParameters[3]
+        + '&operatorid=' + splitParameters[4] + '&previewhtml=' + splitParameters[5];
     gulp.src('')
         .pipe(open(options));
 });
@@ -30,7 +30,7 @@ gulp.task('default', function() {
         return runSequence('qr');
     }
     else {
-        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/qrcode.js --creative Creatives/creativeName/xx/_123/preview.html';
+        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/qrcode.js --creative Creatives/Service/creativeName/xx/_123/preview.html';
         return console.log(gulpParameters);
     }
 });

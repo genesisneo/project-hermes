@@ -16,10 +16,10 @@ class Hermes(sublime_plugin.WindowCommand):
         match = re.search(pattern, file_name, re.IGNORECASE)
         if match:
 
-            # print("match 0: %s" % (match.group(0))) # /Users/g/GitHub/project-hermes/Creatives/KeyToHappiness/TR/_300/preview.html
+            # print("match 0: %s" % (match.group(0))) # /Users/g/GitHub/project-hermes/Creatives/MobileAcademy/KeyToHappiness/TR/_300/preview.html
             # print("match 1: %s" % (match.group(1))) # /Users/g/GitHub/project-hermes/
             # print("match 2: %s" % (match.group(2))) # Creatives
-            # print("match 3: %s" % (match.group(3))) # KeyToHappiness/TR/_300
+            # print("match 3: %s" % (match.group(3))) # MobileAcademy/KeyToHappiness/TR/_300
 
             view.run_command("save")
             project_path = match.group(1)

@@ -8,7 +8,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 * Download, Fork, or Clone this repo.
 * Download and install [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/).
-* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh) but make sure `system` use [node.js ^6.0.0](https://nodejs.org/en/). For macOS & Windows user, please read "*Notes*" below.
+* Download and install [node.js ^6.0.0](https://nodejs.org/en/). If you need multiple version you can use [nvm](http://nvm.sh) but make sure `system` use [node.js ^6.0.0](https://nodejs.org/en/) if your planning to use [Sublime Text](https://www.sublimetext.com/). For macOS & Windows user, please read "*Notes*" below.
 * Open terminal or shell on this repo and type `npm i -g gulp`, once done, type `npm i` to install all dependcies for this repo. For macOS & Windows user, please read "*Notes*" below.
 * Create a new file on `root` name `./config.json` and copy the following:
 ```json
@@ -40,7 +40,7 @@ Default, this will create the server, watch for file changes and reload the page
 **Deploy**
 
 ```bash
-$ gulp --gulpfile ./utilities/deploy.js --creative Creatives/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/deploy.js --creative Creatives/Service/creativeName/xx/_123/preview.html
 ```
 
 This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read *Before pushing* below.
@@ -48,7 +48,7 @@ This command will split your `preview.html`. Separate subscription flow to `defa
 **Preview**
 
 ```bash
-$ gulp --gulpfile ./utilities/preview.js --creative Creatives/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/preview.js --creative Creatives/Service/creativeName/xx/_123/preview.html
 ```
 
 This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
@@ -56,7 +56,7 @@ This command will open your current opened file in your default browser. This on
 **QR Code**
 
 ```bash
-$ gulp --gulpfile ./utilities/qrcode.js --creative Creatives/creativeName/xx/_123/preview.html
+$ gulp --gulpfile ./utilities/qrcode.js --creative Creatives/Service/creativeName/xx/_123/preview.html
 ```
 
 This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will only work on `preview.html`.
@@ -97,14 +97,16 @@ For editors layout and settings, you can copy my custom settings [here](https://
 
 **Sublime Text**
 
-This custom commands only works on macOS. Copy all the files inside `.sublime` folder and paste it on the directory below. Once done, open this repo on your Sublime Text and you can press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
+This custom commands only works on macOS. All you need to do is copy all the files inside `.sublime` folder and paste it on the directory below:
 
 ```
 /Users/{home}/Library/Application Support/Sublime Text 3/Packages/User
 ```
 
 > Where:
-> * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US). Example: `/Users/g/Library/Application Support/Sublime Text 3/Packages/User/Hermes.py`
+> * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US). Example: `/Users/g/Library/Application Support/Sublime Text 3/Packages/User/`
+
+Once done, open this repo on your Sublime Text and press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
 
 Can't find or see `.sublime` & `.vscode` folder on your macOS device?<br>
 Open your terminal and type the following command:
@@ -113,7 +115,7 @@ Open your terminal and type the following command:
 $ defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
-Once done, relaunch your Finder by holding <kbd>cmd</kbd>+<kbd>alt</kbd>+right click on the Finder icon from your Dock. You can click [here](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for more information.
+Once done, relaunch your Finder by holding <kbd>cmd</kbd>+<kbd>alt</kbd>+<kbd>right-click</kbd> on the Finder icon from your Dock. You can click [here](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for more information.
 
 For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4963317ec07e9f2b1c95447983f51059).
 
