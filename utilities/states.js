@@ -112,8 +112,10 @@
         // ref: http://stackoverflow.com/a/43044968/7702792
 
         var jsonRequest = new XMLHttpRequest();
-        jsonRequest.open('GET', '../../../../data/texts.json');
-        jsonRequest.setRequestHeader("Content-Type", "application/json");
+        // jsonRequest.open('GET', '../../../../../data/texts.json');
+        // jsonRequest.setRequestHeader("Content-Type", "application/json");
+        jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?countryCode=tr&operators=300&service=MobileAcademy&languageCode=tr');
+        jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         jsonRequest.onload = function() {
 
             var jsonData = JSON.parse(jsonRequest.responseText);
@@ -126,9 +128,8 @@
             var matchText = function(node, regex, callback, excludeElements) {
                 excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
                 var child = node.firstChild;
-                if(!child) {
+                if(!child)
                     return node;
-                }
                 do {
                     switch (child.nodeType) {
                         case 1:
