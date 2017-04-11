@@ -136,13 +136,14 @@
                                 break;
                             case 3:
                                 child.data = child.data.replace(regex, callback);
+                                node.innerHTML = node.innerHTML.replace(regex, callback);
                                 break;
                         }
                     } while (!!(child = child.nextSibling));
                     return node;
                 };
 
-                matchText(document.body, /\[(.*?)\]/gi, function(match) {
+                matchText(document.getElementById('container'), /\[(.*?)\]/gi, function(match) {
                     var key = match.substring(1, match.length-1);
                     return (!!data[key]) ? data[key] : match;
                 });
@@ -151,7 +152,7 @@
         }
         // jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?countryCode=tr&operators=300&service=MobileAcademy&languageCode=tr');
         // jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        jsonRequest.open('GET', '../../../../../data/texts.json');
+        jsonRequest.open('GET', 'http://'+window.location.hostname+':'+window.location.port+'/data/texts.json');
         jsonRequest.setRequestHeader("Content-Type", "application/json");
         jsonRequest.send();
 
