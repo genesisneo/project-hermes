@@ -112,46 +112,47 @@
         // ref: http://stackoverflow.com/a/43044968/7702792
 
         var jsonRequest = new XMLHttpRequest();
-        // jsonRequest.open('GET', '../../../../../data/texts.json');
-        // jsonRequest.setRequestHeader("Content-Type", "application/json");
-        jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?countryCode=tr&operators=300&service=MobileAcademy&languageCode=tr');
-        jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        jsonRequest.onload = function() {
+        jsonRequest.onreadystatechange = function() {
+            if (jsonRequest.readyState == 4 && jsonRequest.status == 200) {
 
-            var jsonData = JSON.parse(jsonRequest.responseText);
+                var jsonData = JSON.parse(jsonRequest.responseText);
 
-            var data = {};
-            jsonData.map(function(d) {
-                data[d.PageTextKeyName] = d.PageTextValueName;
-            });
+                var data = {};
+                jsonData.map(function(d) {
+                    data[d.PageTextKeyName] = d.PageTextValueName;
+                });
 
-            var matchText = function(node, regex, callback, excludeElements) {
-                excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
-                var child = node.firstChild;
-                if(!child)
+                var matchText = function(node, regex, callback, excludeElements) {
+                    excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
+                    var child = node.firstChild;
+                    if(!child)
+                        return node;
+                    do {
+                        switch (child.nodeType) {
+                            case 1:
+                                if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1)
+                                    continue;
+                                matchText(child, regex, callback, excludeElements);
+                                break;
+                            case 3:
+                                child.data = child.data.replace(regex, callback);
+                                break;
+                        }
+                    } while (!!(child = child.nextSibling));
                     return node;
-                do {
-                    switch (child.nodeType) {
-                        case 1:
-                            if (excludeElements.indexOf(child.tagName.toLowerCase()) > -1) {
-                                continue;
-                            }
-                            matchText(child, regex, callback, excludeElements);
-                            break;
-                        case 3:
-                            child.data = child.data.replace(regex, callback);
-                            break;
-                    }
-                } while (!!(child = child.nextSibling));
-                return node;
-            };
+                };
 
-            matchText(document.body, /\[(.*?)\]/gi, function(match) {
-                var key = match.substring(1, match.length-1);
-                return (!!data[key]) ? data[key] : match;
-            });
+                matchText(document.body, /\[(.*?)\]/gi, function(match) {
+                    var key = match.substring(1, match.length-1);
+                    return (!!data[key]) ? data[key] : match;
+                });
 
+            }
         }
+        // jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?countryCode=tr&operators=300&service=MobileAcademy&languageCode=tr');
+        // jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        jsonRequest.open('GET', '../../../../../data/texts.json');
+        jsonRequest.setRequestHeader("Content-Type", "application/json");
         jsonRequest.send();
 
     }
