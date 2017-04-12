@@ -11,6 +11,12 @@
             "args": ["--gulpfile", "./utilities/browse.js"]
         },
         {
+            "taskName": "Hermes: Data",
+            "isShellCommand": true,
+            "command": "gulp",
+            "args": ["--gulpfile", "./utilities/data.js", "--creative", "${relativeFile}"]
+        },
+        {
             "taskName": "Hermes: Deploy",
             "isShellCommand": true,
             "command": "gulp",

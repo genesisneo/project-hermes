@@ -69,6 +69,14 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root creative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
+**Data**
+
+```bash
+$ gulp --gulpfile ./utilities/data.js
+```
+
+This command will take all the possible text values from Tech Team's text database for your page and save it locally at this path `./data/texts.json`. Once the texts are successfully downloaded, you can now test `index.html` locally. Please note that when you test `index.html` without getting the data, `index.html` won't work.
+
 **Module**
 
 ```bash

@@ -127,6 +127,7 @@
 
         var jsonRequest = new XMLHttpRequest();
         jsonRequest.onreadystatechange = function() {
+
             if (jsonRequest.readyState == 4 && jsonRequest.status == 200) {
 
                 var jsonData = JSON.parse(jsonRequest.responseText);
@@ -163,6 +164,11 @@
                 });
 
             }
+
+            if (jsonRequest.readyState == 4 && jsonRequest.status == 404) {
+                console.log('Please read: https://github.com/genesisneo/project-hermes#commands');
+            }
+            
         }
         // jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+pageService+'&countryCode='+pageCountry+'&operators='+pageOperator);
         // jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

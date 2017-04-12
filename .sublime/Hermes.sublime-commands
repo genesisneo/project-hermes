@@ -7,6 +7,13 @@
     }
   },
   {
+    "caption": "Hermes: Data",
+    "command": "hermes",
+    "args": {
+      "sub_command": "data"
+    }
+  },
+  {
     "caption": "Hermes: Deploy",
     "command": "hermes",
     "args": {

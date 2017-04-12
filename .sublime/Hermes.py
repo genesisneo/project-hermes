@@ -36,6 +36,9 @@ class Hermes(sublime_plugin.WindowCommand):
     def browse(self):
         self.run_command_on_creative_suffix(lambda project_path, file_name, creative_suffix: "gulp --gulpfile %sutilities/browse.js" % (project_path))
 
+    def data(self):
+        self.run_command_on_creative_suffix(lambda project_path, file_name, creative_suffix: "gulp --gulpfile %sutilities/data.js --creative %s" % (project_path, creative_suffix))
+
     def deploy(self):
         self.run_command_on_creative_suffix(lambda project_path, file_name, creative_suffix: "gulp --gulpfile %sutilities/deploy.js --creative %s" % (project_path, creative_suffix))
 
