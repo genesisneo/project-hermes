@@ -1,27 +1,26 @@
 
 var gulp = require('gulp'),
     request = require('request'),
-    editor = require('gulp-json-editor'),
-    streamify = require('gulp-streamify'),
+    runSequence = require('run-sequence'),
     source = require('vinyl-source-stream');
 
-gulp.task('default', function() {
-    return request({
-        url: 'http://172.30.0.166:7870/api/Lpp/pagetexts/GetAllPageTextKeys',
-        json: true,
-        headers: {
-            'User-Agent': 'request'
-        }
-    })
+var gulpParameters;
+
+gulp.task('data', function() {
+    var splitParameters = gulpParameters.split('/');
+    request.get('http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+splitParameters[1]+'&countryCode='+splitParameters[3]+'&operators='+splitParameters[4])
         .pipe(source('texts.json'))
-        .pipe(streamify(editor(function (datas) {
-            return datas.map(function (data) {
-                return {
-                    PageTextKeyId: data.PageTextKeyId,
-                    PageTextKeyName: data.PageTextKeyName,
-                    PageTextValueName: data.PageTextValueName
-                };
-            });
-        })))
         .pipe(gulp.dest('../data/'));
+});
+
+gulp.task('default', function() {
+    var index = process.argv.indexOf('--creative');
+    if (index != -1) {
+        gulpParameters = process.argv[index +1];
+        return runSequence('data');
+    }
+    else {
+        gulpParameters = 'Error: Invalid parameters.\nSyntax: gulp --gulpfile ./utilities/data.js --creative Creatives/Service/creativeName/xx/_123/preview.html';
+        return console.log(gulpParameters);
+    }
 });

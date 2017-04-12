@@ -164,10 +164,10 @@
 
             }
         }
-        jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+pageService+'&countryCode='+pageCountry+'&operators='+pageOperator);
-        jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        // jsonRequest.open('GET', 'http://'+hostName+':'+hostPort+'/data/texts.json');
-        // jsonRequest.setRequestHeader("Content-Type", "application/json");
+        // jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+pageService+'&countryCode='+pageCountry+'&operators='+pageOperator);
+        // jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        jsonRequest.open('GET', 'http://'+hostName+':'+hostPort+'/data/texts.json');
+        jsonRequest.setRequestHeader("Content-Type", "application/json");
         jsonRequest.send();
 
     }
