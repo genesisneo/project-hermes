@@ -99,7 +99,7 @@ Make sure that there is no other content inside `#subscr-flow-states` other than
 
 **Visual Studio Code**
 
-Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read "*Notes*" below.
+Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `data`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read "*Notes*" below.
 
 For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4e98d3c0ad1f3e634f474a32d36b9f12).
 
@@ -114,7 +114,7 @@ This custom commands only works on macOS. All you need to do is copy all the fil
 > Where:
 > * `home`: is your home directory, not your root ("~"). If you don't know your home directory is, you can search [here](https://support.apple.com/kb/PH25270?locale=en_US). Example: `/Users/g/Library/Application Support/Sublime Text 3/Packages/User/`
 
-Once done, open this repo on your Sublime Text and press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
+Once done, open this repo on your Sublime Text and press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `data`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
 
 Can't find or see `.sublime` & `.vscode` folder on your macOS device?<br>
 Open your terminal and type the following command:
