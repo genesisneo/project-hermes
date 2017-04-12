@@ -108,6 +108,20 @@
         }
         attachdefault();
 
+        // get url and url parts using javascript
+        // ref: https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
+
+        var pageUrl = window.location,
+            hostName = pageUrl.hostname,
+            hostPort = pageUrl.port,
+            splitPath = pageUrl.pathname.split('/');
+
+        var pageFolder = splitPath[1],
+            pageService = splitPath[2],
+            pageCreative = splitPath[3],
+            pageCountry = splitPath[4],
+            pageOperator = splitPath[5];
+
         // load texts.json and replace [text-here] with correct value
         // ref: http://stackoverflow.com/a/43044968/7702792
 
@@ -150,10 +164,10 @@
 
             }
         }
-        // jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?countryCode=tr&operators=300&service=MobileAcademy&languageCode=tr');
-        // jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        jsonRequest.open('GET', 'http://'+window.location.hostname+':'+window.location.port+'/data/texts.json');
-        jsonRequest.setRequestHeader("Content-Type", "application/json");
+        jsonRequest.open('GET', 'http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+pageService+'&countryCode='+pageCountry+'&operators='+pageOperator);
+        jsonRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        // jsonRequest.open('GET', 'http://'+hostName+':'+hostPort+'/data/texts.json');
+        // jsonRequest.setRequestHeader("Content-Type", "application/json");
         jsonRequest.send();
 
     }
