@@ -101,8 +101,11 @@
                 if (pageRequest.readyState == 4 && pageRequest.status == 200) {
                     sfc.innerHTML = pageRequest.responseText;
                 }
-                if (jsonRequest.readyState == 4 && jsonRequest.status == 404) {
-                    console.log('The file "default.html" is missing! It should be beside "index.html" in able to test this.');
+                if (pageRequest.readyState == 4 && pageRequest.status == 404) {
+                    console.log('[!] ERROR:\n'+
+                        'The file "default.html" is missing!\n'+
+                        'It should be beside "index.html" to test this.\n'+
+                        'Please read: https://github.com/genesisneo/project-hermes#commands');
                 }
             }
             pageRequest.open("GET", "./default.html", true);
@@ -169,7 +172,10 @@
             }
 
             if (jsonRequest.readyState == 4 && jsonRequest.status == 404) {
-                console.log('Please read: https://github.com/genesisneo/project-hermes#commands');
+                    console.log('[!] ERROR:\n'+
+                        'The file "./data/texts.json" is missing!\n'+
+                        'You need to do "Hermes: Data" first to test this.\n'+
+                        'Please read: https://github.com/genesisneo/project-hermes#commands');
             }
             
         }
