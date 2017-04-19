@@ -36,6 +36,11 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# System files
+**/.DS_Store
+**/desktop.ini
+**/thumbs.db
+
 # Configuration file
 config.json
 
