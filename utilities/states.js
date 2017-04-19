@@ -101,6 +101,9 @@
                 if (pageRequest.readyState == 4 && pageRequest.status == 200) {
                     sfc.innerHTML = pageRequest.responseText;
                 }
+                if (jsonRequest.readyState == 4 && jsonRequest.status == 404) {
+                    console.log('The file "default.html" is missing! It should be beside "index.html" in able to test this.');
+                }
             }
             pageRequest.open("GET", "./default.html", true);
             pageRequest.setRequestHeader('Content-type', 'text/html');
