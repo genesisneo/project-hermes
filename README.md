@@ -75,7 +75,7 @@ This command will open your root creative folder `./creative/` on your default b
 $ gulp --gulpfile ./utilities/data.js --creative Creatives/Service/creativeName/xx/_123/preview.html
 ```
 
-This command will take all the possible text values from Tech Team's text database for your page and save it locally at this path `./data/texts.json`. Once the texts are successfully downloaded, you can now test `index.html` locally. Please note that when you test `index.html` without getting the data, `index.html` won't work.
+This command will take all the possible text values from Tech Team's text database for your page and save it locally at this path `./data/texts.json`. Once the texts are successfully downloaded, you can now test `index.html` locally. Please note that when you test `index.html` without getting the data, `index.html` won't work. You should also include `default.html` where `index.html` is. Once testing is done, you can then move `default.html` to it respective folder.
 
 **Module**
 
