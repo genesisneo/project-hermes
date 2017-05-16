@@ -21,6 +21,7 @@ gulp.task('html', function() {
 gulp.task('watch', function() {
     gulp.watch(['./' + config.creatives + '/**/*.html'], ['html']);
     gulp.watch(['./' + config.creatives + '/**/*.css'], ['html']);
+    gulp.watch(['./' + config.creatives + '/**/*.js'], ['html']);
 });
 
 gulp.task('default', function() {
