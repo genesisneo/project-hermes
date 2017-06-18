@@ -1,0 +1,182 @@
+
+/*
+ * Table of Contents:
+ *
+ * 01.0 - global
+ * 02.0 - container
+ * 03.0 - close
+ * 04.0 - creative
+ * 05.0 - design
+ * 06.0 - price-points
+ * 07.0 - states
+ * 08.0 - click-here message lang-switch disclaimer
+*/
+
+/* 01.0 - global */
+
+* {
+    border: none;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+    font: 16px/normal Arial, Helvetica, sans-serif;
+}
+
+a,
+a:focus,
+a:visited {
+    color: #2196f3;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover {
+    color: #349ff5;
+}
+
+/* 02.0 - container */
+
+#container {
+    position: relative;
+    margin: 0;
+    padding: 0 0 10px;
+    direction: ltr;
+    overflow: hidden;
+    text-align: center;
+}
+
+#container.ar,
+#container.dv,
+#container.fa,
+#container.he,
+#container.ku,
+#container.ur {
+    direction: rtl;
+}
+
+#container.stop-animations *,
+#container.stop-animations *:before,
+#container.stop-animations *:after {
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+/* 03.0 - close */
+
+#close {
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent url('../img/close.png') 50% 50% no-repeat;
+    background-size: 25px 25px;
+    z-index: 998;
+}
+
+/* 04.0 - creative */
+
+#creative {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#container.layout-viewport #creative {
+    height: 375px;
+}
+
+#container.layout-stack #creative {
+    height: auto;
+}
+
+/* 05.0 - design */
+
+#design {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: #eee;
+}
+
+#container.layout-viewport #design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 375px;
+}
+
+#container.layout-stack #design {
+    position: relative;
+    height: 175px;
+}
+
+/* 06.0 - price-points */
+
+.price-points {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size:12px;
+}
+
+/* 07.0 - states */
+
+#states {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background: #ddd;
+}
+
+#container.layout-viewport #states {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: 280px;
+}
+
+#container.layout-stack #states {
+    position: relative;
+}
+
+/* 08.0 - click-here message lang-switch disclaimer */
+
+#click-here,
+#message,
+#lang-switch,
+#disclaimer {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0 10px;
+    font-size: 12px;
+}

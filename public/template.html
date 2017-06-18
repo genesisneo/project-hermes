@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Template</title>
+
+    <meta charset="utf-8">
+    <meta name="supportedlanguages" content="en">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1, minimal-ui">
+    
+    <link href="./assets/css/layout.css" rel="stylesheet">
+    <link href="./assets/css/states.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="container" class="layout-viewport show-directsubscribe">
+
+        <a id="close" href="javascript:void(0)"></a>
+
+        <div id="creative">
+
+            <div id="design">
+                <!-- design goes here -->
+            </div>
+
+            <p id="price-points" class="price-points">1 message 1 aed per week</p>
+
+            <div id="states">
+                
+                <div id="directsubscribe">
+                    <p id="direct-subscribe-message">[direct-subscribe-message]</p>
+                    <a id="subscribe" class="btn pulse" href="javascript:void(0)">[subscribe]</a>
+                    <a id="subscribe-no" href="javascript:void(0)">[subscribe-no]</a>
+                </div>
+
+                <div id="doubleconfirmation">
+                    <p id="double-confirmation-message">[double-confirmation-message]</p>
+                    <a id="confirm" class="btn pulse" href="javascript:void(0)">[confirm]</a>
+                    <a id="confirm-no" href="javascript:void(0)">[confirm-no]</a>
+                </div>
+
+                <form id="numberentry">
+                    <label id="number-entry-message">[number-entry-message]</label>
+                    <input id="input-number" type="tel" maxlength="10" value="0">
+                    <a id="submit-number" class="btn pulse" href="javascript:void(0)">[submit-number]</a>
+                    <p id="error-already-subscribe" class="error">[error-already-subscribe]</p>
+                    <p id="error-invalid-number" class="error">[error-invalid-number]</p>
+                </form>
+
+                <form id="pinentry">
+                    <label id="pin-entry-message">[pin-entry-message]</label>
+                    <input id="input-pin" type="tel" maxlength="4" value="">
+                    <a id="submit-pin" class="btn pulse" href="javascript:void(0)">[submit-pin]</a>
+                    <p id="error-invalid-pin" class="error">[error-invalid-pin]</p>
+                </form>
+
+                <div id="mo">
+                    [mo]
+                </div>
+
+                <div id="congrats">
+                    <p id="congrats-title">[congrats-title]</p>
+                    <p id="congrats-message">[congrats-message]</p>
+                </div>
+
+                <div id="subscriptionpolling">
+                    <p id="subscription-polling-message">[subscription-polling-message]</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="click-here">
+            <a id="click-here-link" href="javascript:void(0)">Click here</a>
+            <span id="click-here-message">to subscribe to the service.</span>
+        </div>
+
+        <div id="message" class="message">This is an auto renewal service.</div>
+
+        <a id="lang-switch" href="javascript:void(0)">AR</a>
+
+        <div id="disclaimer" class="disclaimer">
+            You will get unlimited access upon subscription. To make use of this service you must be more than 18 years of age or have received permission from your parents or person who is authorized to pay your bill.<br><br>
+            Copyright © 2017. All rights reserved.<br><br>
+            <a id="terms" href="javascript:void(0)">Terms &amp; Conditions</a> | <a id="policy" href="javascript:void(0)">Privacy Policy</a>
+        </div>
+
+        <div id="blocker">
+            <div id="blocker-message">Please wait while this page is fully loaded.</div>
+        </div>
+
+        <div id="popup">
+            <div id="popup-message">Sorry, this service is not support by your operator.</div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
