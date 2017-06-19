@@ -2,28 +2,34 @@
 /*
  * Table of Contents:
  *
- * 01.0 - button
- * 01.0 - states
- * 02.0 - directsubscribe
- * 03.0 - doubleconfirmation
- * 04.0 - numberentry
- * 05.0 - pinentry
- * 06.0 - mo
- * 07.0 - congrats
- * 08.0 - subscriptionpolling
- * 09.0 - blocker
- * 10.0 - popup
+ * 01.0 - global
+ * * 01.1 - button
+ * * 01.2 - pulse
+ * * 01.3 - error
+ * 02.0 - states
+ * 03.0 - directsubscribe
+ * 04.0 - doubleconfirmation
+ * 05.0 - numberentry
+ * 06.0 - pinentry
+ * 07.0 - mo
+ * 08.0 - congrats
+ * 09.0 - subscriptionpolling
+ * 10.0 - blocker
+ * 11.0 - popup
 */
 
-/* button */
+/* 01.0 - global */
+
+/* 01.1 - button */
 
 .btn,
 .btn:focus,
 .btn:visited {
     position: relative;
     display: block;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
+    width: 225px;
     font-size: 16px;
     color: #fff;
     background: #ccc;
@@ -36,9 +42,11 @@
     background: #cfcfcf;
 }
 
+/* 01.2 - pulse */
+
 .pulse {
-    -webkit-animation: pulse 1s linear 0s infinite;
-    animation: pulse 1s linear 0s infinite;
+    -webkit-animation: pulse 0.5s linear 0s infinite;
+    animation: pulse 0.5s linear 0s infinite;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
@@ -50,7 +58,17 @@
     50% { transform: scale(0.98); }
 }
 
-/* states */
+/* 01.3 - error */
+
+.error {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+    color: #f00;
+}
+
+/* 02.0 - states */
 
 #directsubscribe,
 #doubleconfirmation,
@@ -67,7 +85,7 @@
     text-align: center;
 }
 
-/* directsubscribe */
+/* 03.0 - directsubscribe */
 
 #container.show-directsubscribe #directsubscribe {
     display: block;
@@ -80,7 +98,7 @@
     padding: 0;
 }
 
-/* doubleconfirmation */
+/* 04.0 - doubleconfirmation */
 
 #container.show-doubleconfirmation #doubleconfirmation {
     display: block;
@@ -93,7 +111,128 @@
     padding: 0;
 }
 
-/* blocker */
+/* 05.0 - numberentry */
+
+#container.show-numberentry #numberentry {
+    display: block;
+}
+
+#number-entry-message {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+#input-number {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 150px;
+    direction: ltr;
+    font-size: 16px;
+}
+
+/* 06.0 - pinentry */
+
+#container.show-pinentry #pinentry {
+    display: block;
+}
+
+#pin-entry-message {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+#input-pin {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 50px;
+    direction: ltr;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 07.0 - mo */
+
+#container.show-mo #mo {
+    display: block;
+}
+
+#mo-sms,
+#keyword,
+#mo-to,
+#shortcode {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.emphasis {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 08.0 - congrats */
+
+#container.show-congrats #congrats {
+    display: block;
+}
+
+#congrats-title,
+#congrats-message {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+#congrats-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 09.0 - subscriptionpolling */
+
+#container.show-subscriptionpolling #subscriptionpolling {
+    display: block;
+}
+
+#subscription-polling-message {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+#subscription-polling-message:after {
+    content: '';
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background: transparent url('../img/loading.gif') 50% 50% no-repeat;
+    background-size: 25px 25px;
+}
+
+/* 10.0 - blocker */
+
+#container.show-alreadysubscribed #blocker,
+#container.show-blocker #blocker,
+#container.show-immediatesubscribe #blocker,
+#container.show-redirectservice #blocker,
+#container.show-redirectxhrreturn #blocker {
+    display: -webkit-flex;
+    display: flex;
+}
 
 #blocker {
     position: absolute;
@@ -137,16 +276,12 @@
     background-size: 25px 25px;
 }
 
-#container.show-alreadysubscribed #blocker,
-#container.show-blocker #blocker,
-#container.show-immediatesubscribe #blocker,
-#container.show-redirectservice #blocker,
-#container.show-redirectxhrreturn #blocker {
+/* 11.0 - popup */
+
+#container.show-popup #popup {
     display: -webkit-flex;
     display: flex;
 }
-
-/* popup */
 
 #popup {
     position: absolute;
@@ -176,9 +311,4 @@
     width: 280px;
     height: auto;
     background: #fff;
-}
-
-#container.show-popup #popup {
-    display: -webkit-flex;
-    display: flex;
 }

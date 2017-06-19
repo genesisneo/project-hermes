@@ -20,30 +20,38 @@
     // --- states controls
 
     var pageStates = [
-        'show-operatorselection',
         'show-directsubscribe',
         'show-doubleconfirmation',
-        'show-subscriptionpolling',
         'show-numberentry',
         'show-pinentry',
         'show-mo',
         'show-congrats',
-        'show-error'
+        'show-subscriptionpolling',
+        'show-alreadysubscribed',
+        'show-blocker',
+        'show-immediatesubscribe',
+        'show-redirectservice',
+        'show-redirectxhrreturn',
+        'show-popup'
     ];
     var container = document.getElementById('container');
     window.state = function(string) {
         if (string == null || string == '' || string == '?' || string == 'help') {
             console.log(
                 "You can use the following command:\n\n" +
-                "- Operator Selection: \t\tstate('show-operatorselection')\n" +
-                "- Default: \t\t\t\t\tstate('show-directsubscribe')\n" +
+                "- Direct Subscribe: \t\tstate('show-directsubscribe')\n" +
                 "- Double Confirmation: \t\tstate('show-doubleconfirmation')\n" +
-                "- Subscription Polling: \tstate('show-subscriptionpolling')\n" +
                 "- Number Entry: \t\t\tstate('show-numberentry')\n" +
                 "- PIN Entry: \t\t\t\tstate('show-pinentry')\n" +
                 "- MO Message: \t\t\t\tstate('show-mo')\n" +
                 "- Congrats: \t\t\t\tstate('show-congrats')\n" +
-                "- Error: \t\t\t\t\tstate('show-error')"
+                "- Subscription Polling: \tstate('show-subscriptionpolling')\n" +
+                "- Already Subscribed: \t\tstate('show-alreadysubscribed')\n" +
+                "- Blocker: \t\t\t\t\tstate('show-blocker')\n" +
+                "- Immediate Subscribe: \t\tstate('show-immediatesubscribe')\n" +
+                "- Redirect Service: \t\tstate('show-redirectservice')\n" +
+                "- Redirect XHR Return: \t\tstate('show-redirectxhrreturn')\n" +
+                "- Pop Up: \t\t\t\t\tstate('show-popup')"
             );
         }
         else {

@@ -6,6 +6,8 @@
     <title>Template</title>
 
     <meta charset="utf-8">
+    <meta name="designer" value="Genesis">
+    <meta name="jira-task-id" value="GT-246">
     <meta name="supportedlanguages" content="en">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1, minimal-ui">
@@ -42,23 +44,25 @@
                     <a id="confirm-no" href="javascript:void(0)">[confirm-no]</a>
                 </div>
 
-                <form id="numberentry">
+                <div id="numberentry">
                     <label id="number-entry-message">[number-entry-message]</label>
                     <input id="input-number" type="tel" maxlength="10" value="0">
                     <a id="submit-number" class="btn pulse" href="javascript:void(0)">[submit-number]</a>
-                    <p id="error-already-subscribe" class="error">[error-already-subscribe]</p>
                     <p id="error-invalid-number" class="error">[error-invalid-number]</p>
-                </form>
+                </div>
 
-                <form id="pinentry">
+                <div id="pinentry">
                     <label id="pin-entry-message">[pin-entry-message]</label>
                     <input id="input-pin" type="tel" maxlength="4" value="">
                     <a id="submit-pin" class="btn pulse" href="javascript:void(0)">[submit-pin]</a>
                     <p id="error-invalid-pin" class="error">[error-invalid-pin]</p>
-                </form>
+                </div>
 
                 <div id="mo">
-                    [mo]
+                    <p id="mo-sms">[mo-sms]</p>
+                    <p id="keyword" class="emphasis">[keyword]</p>
+                    <p id="mo-to">[mo-to]</p>
+                    <p id="shortcode" class="emphasis">[shortcode]</p>
                 </div>
 
                 <div id="congrats">

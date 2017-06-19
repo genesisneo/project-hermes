@@ -72,9 +72,9 @@ a:hover {
     direction: rtl;
 }
 
-#container.stop-animations *,
-#container.stop-animations *:before,
-#container.stop-animations *:after {
+#container.stop-all-animations *,
+#container.stop-all-animations *:before,
+#container.stop-all-animations *:after {
     -webkit-animation: none !important;
     animation: none !important;
 }
@@ -179,4 +179,8 @@ a:hover {
     margin: 10px auto;
     padding: 0 10px;
     font-size: 12px;
+}
+
+#lang-switch {
+    display: inline-block;
 }

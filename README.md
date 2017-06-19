@@ -141,15 +141,19 @@ This command only accepts *Strings*. You can use the following command:
 
 | State                 | Command                           |
 |-----------------------|-----------------------------------|
-| Operator Selection:   | state('show-operatorselection')   |
-| Default:              | state('show-directsubscribe')     |
+| Direct Subscribe:     | state('show-directsubscribe')     |
 | Double Confirmation:  | state('show-doubleconfirmation')  |
-| Subscription Polling: | state('show-subscriptionpolling') |
 | Number Entry:         | state('show-numberentry')         |
 | PIN Entry:            | state('show-pinentry')            |
 | MO Message:           | state('show-mo')                  |
 | Congrats:             | state('show-congrats')            |
-| Error:                | state('show-error')               |
+| Subscription Polling: | state('show-subscriptionpolling') |
+| Already Subscribed:   | state('show-alreadysubscribed')   |
+| Blocker:              | state('show-blocker')             |
+| Immediate Subscribe:  | state('show-immediatesubscribe')  |
+| Redirect Service:     | state('show-redirectservice')     |
+| Redirect XHR Return:  | state('show-redirectxhrreturn')   |
+| Pop Up:               | state('show-popup')               |
 
 You can use `state()`, `state('?')`, or `state('help')` to show this commands.
 
