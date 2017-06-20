@@ -26,7 +26,9 @@
         'show-pinentry',
         'show-mo',
         'show-congrats',
-        'show-subscriptionpolling',
+        'show-subscriptionpolling'
+    ];
+    var pageOverlayStates = [
         'show-alreadysubscribed',
         'show-blocker',
         'show-immediatesubscribe',
@@ -36,7 +38,7 @@
     ];
     var container = document.getElementById('container');
     window.state = function(string) {
-        if (string == null || string == '' || string == '?' || string == 'help') {
+        if (string == null || string == '?' || string == 'help') {
             console.log(
                 "You can use the following command:\n\n" +
                 "- Direct Subscribe: \t\tstate('show-directsubscribe')\n" +
@@ -51,8 +53,15 @@
                 "- Immediate Subscribe: \t\tstate('show-immediatesubscribe')\n" +
                 "- Redirect Service: \t\tstate('show-redirectservice')\n" +
                 "- Redirect XHR Return: \t\tstate('show-redirectxhrreturn')\n" +
-                "- Pop Up: \t\t\t\t\tstate('show-popup')"
+                "- Pop Up: \t\t\t\t\tstate('show-popup')\n" + 
+                "- Remove Overlay: \t\t\tstate('')"
             );
+        }
+        else if (string == '' || string == 'show-alreadysubscribed' || string == 'show-blocker' || string == 'show-immediatesubscribe' || string == 'show-redirectservice' || string == 'show-redirectxhrreturn' || string == 'show-popup') {
+            for(var i=0; i<pageOverlayStates.length; i++) {
+                removeClass(container, pageOverlayStates[i]);
+            }
+            addClass(container, string);
         }
         else {
             for(var i=0; i<pageStates.length; i++) {

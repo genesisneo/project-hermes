@@ -154,6 +154,7 @@ This command only accepts *Strings*. You can use the following command:
 | Redirect Service:     | state('show-redirectservice')     |
 | Redirect XHR Return:  | state('show-redirectxhrreturn')   |
 | Pop Up:               | state('show-popup')               |
+| Remove Overlay:       | state('')                         |
 
 You can use `state()`, `state('?')`, or `state('help')` to show this commands.
 
