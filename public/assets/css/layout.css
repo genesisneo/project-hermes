@@ -35,6 +35,8 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     background: #fff;
     color: #333;
     font: 16px/normal Arial, Helvetica, sans-serif;
@@ -58,6 +60,8 @@ a:hover {
     position: relative;
     margin: 0;
     padding: 0 0 10px;
+    min-width: 100%;
+    min-height: 100%;
     direction: ltr;
     overflow: hidden;
     text-align: center;
