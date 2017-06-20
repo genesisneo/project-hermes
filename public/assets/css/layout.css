@@ -181,6 +181,23 @@ a:hover {
     font-size: 12px;
 }
 
+#container.show-doubleconfirmation #click-here,
+#container.show-numberentry #click-here,
+#container.show-pinentry #click-here,
+#container.show-mo #click-here,
+#container.show-congrats #click-here,
+#container.show-subscriptionpolling #click-here {
+    display: none;
+}
+
 #lang-switch {
     display: inline-block;
+}
+
+#container.show-doubleconfirmation #lang-switch,
+#container.show-pinentry #lang-switch,
+#container.show-mo #lang-switch,
+#container.show-congrats #lang-switch,
+#container.show-subscriptionpolling #lang-switch {
+    display: none;
 }
