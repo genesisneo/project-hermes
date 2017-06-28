@@ -153,14 +153,14 @@ a:hover {
 
 /* 07.0 - states */
 
-#states {
+.states {
     display: block;
     margin: 0 auto;
     padding: 10px;
     background: #ddd;
 }
 
-#container.layout-viewport #states {
+#container.layout-viewport .states {
     position: absolute;
     left: 10px;
     right: 10px;
@@ -168,7 +168,7 @@ a:hover {
     width: 280px;
 }
 
-#container.layout-stack #states {
+#container.layout-stack .states {
     position: relative;
 }
 
