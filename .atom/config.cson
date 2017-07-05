@@ -1,0 +1,65 @@
+
+# This command requires https://atom.io/packages/atom-shell-commands package to run.
+# Please install `atom-shell-commands` first before adding this script on your `config.cson`
+
+  "atom-shell-commands":
+    commands: [
+      {
+        name: "Hermes Browse"
+        command: "gulp"
+        arguments: [
+          "--gulpfile"
+          "./utilities/browse.js"
+        ]
+        options:
+          cwd: "{ProjectDir}"
+      }
+      {
+        name: "Hermes Data"
+        command: "gulp"
+        arguments: [
+          "--gulpfile"
+          "./utilities/data.js"
+          "--creative"
+          "{ProjectRel}"
+        ]
+        options:
+          cwd: "{ProjectDir}"
+      }
+      {
+        name: "Hermes Deploy"
+        command: "gulp"
+        arguments: [
+          "--gulpfile"
+          "./utilities/deploy.js"
+          "--creative"
+          "{ProjectRel}"
+        ]
+        options:
+          cwd: "{ProjectDir}"
+      }
+      {
+        name: "Hermes Preview"
+        command: "gulp"
+        arguments: [
+          "--gulpfile"
+          "./utilities/preview.js"
+          "--creative"
+          "{ProjectRel}"
+        ]
+        options:
+          cwd: "{ProjectDir}"
+      }
+      {
+        name: "Hermes QR"
+        command: "gulp"
+        arguments: [
+          "--gulpfile"
+          "./utilities/qrcode.js"
+          "--creative"
+          "{ProjectRel}"
+        ]
+        options:
+          cwd: "{ProjectDir}"
+      }
+    ]
