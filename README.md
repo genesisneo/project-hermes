@@ -103,6 +103,14 @@ Custom commands for this editor is ready to use. Just open this repo on your Vis
 
 For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4e98d3c0ad1f3e634f474a32d36b9f12).
 
+**Atom**
+
+Please note that this custom commands only works on macOS. In order for you to use the custom commands on this editor, first, you need to install this required package [atom-shell-commands](https://atom.io/packages/atom-shell-commands). Once you install the required package, open the configuration file `./atom/config.cson` and navigate to <kbd>Atom</kbd> > <kbd>Config...</kbd>. Once you open your Atom configuration, you can copy and paste the content of `.atom/config.cson` to your Atom `config.cson`.
+
+Once done, reload your Atom by pressing <kbd>cmd</kbd>+<kbd>alt</kbd>+<kbd>ctlr</kbd>+<kbd>l</kbd> and press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `data`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
+
+For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/b36859aa0bc4c5a1ffcaf668483e4a8e).
+
 **Sublime Text**
 
 This custom commands only works on macOS. All you need to do is copy all the files inside `.sublime` folder and paste it on the directory below:
