@@ -29,7 +29,7 @@ Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
 ## Commands:
 
-**Default**
+#### Default
 
 ```bash
 $ gulp
@@ -37,7 +37,7 @@ $ gulp
 
 Default, this will create the server, watch for file changes and reload the page if necessary. Please note to keep it running in the background.
 
-**Deploy**
+#### Deploy
 
 ```bash
 $ gulp --gulpfile ./utilities/deploy.js --creative Creatives/Service/creativeName/xx/_123/preview.html
@@ -45,7 +45,7 @@ $ gulp --gulpfile ./utilities/deploy.js --creative Creatives/Service/creativeNam
 
 This command will split your `preview.html`. Separate subscription flow to `default.html` and creative to `index.html`. After you do this, please read *Before pushing* below.
 
-**Preview**
+#### Preview
 
 ```bash
 $ gulp --gulpfile ./utilities/preview.js --creative Creatives/Service/creativeName/xx/_123/preview.html
@@ -53,7 +53,7 @@ $ gulp --gulpfile ./utilities/preview.js --creative Creatives/Service/creativeNa
 
 This command will open your current opened file in your default browser. This only works on the following pages: `default.html`, `index.html`, and `preview.html`.
 
-**QR Code**
+#### QR Code
 
 ```bash
 $ gulp --gulpfile ./utilities/qrcode.js --creative Creatives/Service/creativeName/xx/_123/preview.html
@@ -61,7 +61,7 @@ $ gulp --gulpfile ./utilities/qrcode.js --creative Creatives/Service/creativeNam
 
 This command will generate a QR code for you to check the page your working on to any mobile devices. Please note that this will only work on `preview.html`.
 
-**Browse**
+#### Browse
 
 ```bash
 $ gulp --gulpfile ./utilities/browse.js
@@ -69,7 +69,7 @@ $ gulp --gulpfile ./utilities/browse.js
 
 This command will open your root creative folder `./creative/` on your default browser, for you to preview, or check other creatives.
 
-**Data**
+#### Data
 
 ```bash
 $ gulp --gulpfile ./utilities/data.js --creative Creatives/Service/creativeName/xx/_123/preview.html
@@ -77,7 +77,7 @@ $ gulp --gulpfile ./utilities/data.js --creative Creatives/Service/creativeName/
 
 This command will take all the possible text values from Tech Team's text database for your page and save it locally at this path `./data/texts.json`. Once the texts are successfully downloaded, you can now test `index.html` locally. Please note that when you test `index.html` without getting the data, `index.html` won't work. You should also include `default.html` where `index.html` is. Once testing is done, you can then move `default.html` to it respective folder.
 
-**Module**
+#### Module
 
 ```bash
 $ gulp --gulpfile ./utilities/modules.js
@@ -97,13 +97,13 @@ Make sure that there is no other content inside `#subscr-flow-states` other than
 
 ## Plugins:
 
-**Visual Studio Code**
+#### Visual Studio Code
 
 Custom commands for this editor is ready to use. Just open this repo on your Visual Studio Code and press <kbd>cmd</kbd>+<kbd>p</kbd> for macOS, <kbd>ctrl</kbd>+<kbd>p</kbd> on Windows, and type `task herm`. You can choose from `browse`, `data`, `deploy`, `preview`, or `qr`. For macOS & Windows user, please read "*Notes*" below.
 
 For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/4e98d3c0ad1f3e634f474a32d36b9f12).
 
-**Atom**
+#### Atom
 
 Please note that this custom commands only works on macOS. In order for you to use the custom commands on this editor, first, you need to install this required package [atom-shell-commands](https://atom.io/packages/atom-shell-commands). Once you install the required package, open the configuration file `./atom/config.cson` and navigate to <kbd>Atom</kbd> > <kbd>Config...</kbd>. Once you open your Atom configuration, you can copy and paste the content of `.atom/config.cson` to your Atom `config.cson`.
 
@@ -115,7 +115,7 @@ For editors layout and settings, you can copy my custom settings [here](https://
 .git, .hg, .svn, .DS_Store, ._*, Thumbs.db, desktop.ini, .atom, .sublime, .vscode, data, node_modules, utilities, .gitignore, favicon.ico, gulpfile.js, package.json, qr.html, README.md
 ```
 
-**Sublime Text**
+#### Sublime Text
 
 This custom commands only works on macOS. All you need to do is copy all the files inside `.sublime` folder and paste it on the directory below:
 
@@ -143,7 +143,7 @@ For editors layout and settings, you can copy my custom settings [here](https://
 
 ## Browser console function:
 
-**State**
+#### State
 
 ```bash
 > state()
@@ -170,7 +170,7 @@ This command only accepts *Strings*. You can use the following command:
 
 You can use `state()`, `state('?')`, or `state('help')` to show this commands.
 
-**Animation**
+#### Animation
 
 ```bash
 > animation()
@@ -189,13 +189,13 @@ You can use `animation()`, `animation('?')`, or `animation('help')` to show this
 
 ## Notes:
 
-**macOS**
+#### macOS
 
 Make sure you have Xcode on your device.  if you do not have Xcode installed on your device and you do not wish to download the ~4.5GB file, you can install the Command Line Tools.
 
 To do this, open your terminal and type `xcode-select --install` and press return, a popup window will appear that asks: “The xcode-select command requires the command line developer tools. Would you like to install the tools now?” choose to confirm this by clicking “Install”, then agree to the Terms of Service when requested. For troubleshooting, you can read it [here](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 
-**Windows**
+#### Windows
 
 Once [node.js ^6.0.0](https://nodejs.org/en/) and [gulp.js ^3.9.0](http://gulpjs.com/) are installed globally & locally, you need to add their paths to Windows environment. To do this, search for `Environment Variables` on your Windows device and add the following:
 
