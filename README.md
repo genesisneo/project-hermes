@@ -109,7 +109,11 @@ Please note that this custom commands only works on macOS. In order for you to u
 
 Once done, reload your Atom by pressing <kbd>cmd</kbd>+<kbd>alt</kbd>+<kbd>ctlr</kbd>+<kbd>l</kbd> and press <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> and type `herm`. You can choose from `browse`, `data`, `deploy`, `preview`, or `qr`. For macOS user, please read "*Notes*" below.
 
-For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/b36859aa0bc4c5a1ffcaf668483e4a8e).
+For editors layout and settings, you can copy my custom settings [here](https://gist.github.com/genesisneo/b36859aa0bc4c5a1ffcaf668483e4a8e). You can hide unnecessary file by going to <kbd>Atom</kbd> > <kbd>Preferences...</kbd> and look for `Ignored Names` section. On the input field below it, you can paste the following:
+
+```
+.git, .hg, .svn, .DS_Store, ._*, Thumbs.db, desktop.ini, .atom, .sublime, .vscode, data, node_modules, utilities, .gitignore, favicon.ico, gulpfile.js, package.json, qr.html, README.md
+```
 
 **Sublime Text**
 
