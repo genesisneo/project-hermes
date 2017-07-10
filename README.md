@@ -2,6 +2,29 @@
 
 Used for creating [First Screen](http://1screen.com/) LPP landing page.
 
+#### Table of Contents:
+* [How to setup](#how-to-setup)
+* [Commands](#commands)
+* * [Default](#default)
+* * [Deploy](#deploy)
+* * [Preview](#preview)
+* * [QR Code](#qr-code)
+* * [Browse](#browse)
+* * [Data](#data)
+* * [Module](#module)
+* [Before pushing](#before-pushing)
+* [Plugins](#plugins)
+* * [Visual Studio Code](#visual-studio-code)
+* * [Atom](#atom)
+* * [Sublime Text](#sublime-text)
+* [Browser console function](#browser-console-function)
+* * [State](#state)
+* * [Animation](#animation)
+* [Notes](#notes)
+* * [macOS](#macos)
+* * [Windows](#windows)
+* [Question](#question)
+
 ---
 
 ## How to setup:
