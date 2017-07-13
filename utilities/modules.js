@@ -9,8 +9,8 @@ gulp.task('default', function() {
         .pipe(gulp.dest('../node_modules/connect-livereload/'))
         .pipe(tap(function(file, callback) {
             var newFile = file.contents.toString(),
-                oldText = 'return \'<script src="\' + src + \'" async="" defer=""></script>\'',
-                newtext = 'return \'<script src="\' + src + \'" async="" defer="">\\n</script><script src="../../../../../utilities/states.js" ></script>\'';
+                oldText = '</script>',
+                newtext = '</script>\\n<script src="../../../../../utilities/states.js" ></script>';
                 newContents = newFile.replace(oldText, newtext);
             file.contents = new Buffer(newContents);
             return file;

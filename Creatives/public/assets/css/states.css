@@ -92,7 +92,7 @@
     display: block;
 }
 
-#direct-subscribe-message {
+#directsubscribe-message {
     position: relative;
     display: block;
     margin: 10px auto;
@@ -105,7 +105,7 @@
     display: block;
 }
 
-#double-confirmation-message {
+#doubleconfirmation-message {
     position: relative;
     display: block;
     margin: 10px auto;
@@ -118,7 +118,7 @@
     display: block;
 }
 
-#number-entry-message {
+#numberentry-message {
     position: relative;
     display: block;
     margin: 10px auto;
@@ -141,7 +141,7 @@
     display: block;
 }
 
-#pin-entry-message {
+#pinentry-message {
     position: relative;
     display: block;
     margin: 10px auto;
@@ -205,7 +205,7 @@
     display: block;
 }
 
-#subscription-polling-message {
+#subscriptionpolling-message {
     position: relative;
     display: block;
     margin: 10px auto;
