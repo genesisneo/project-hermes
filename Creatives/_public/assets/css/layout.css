@@ -94,7 +94,7 @@ a:hover {
     height: 25px;
     background: transparent url('../img/close.png') 50% 50% no-repeat;
     background-size: 25px 25px;
-    z-index: 998;
+    z-index: 1000;
 }
 
 /* 04.0 - creative */
