@@ -212,7 +212,7 @@
     padding: 0;
 }
 
-#subscription-polling-message:after {
+#subscriptionpolling-message:after {
     content: '';
     position: relative;
     display: block;
