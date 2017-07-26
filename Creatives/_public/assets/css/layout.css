@@ -7,7 +7,7 @@
  * 03.0 - close
  * 04.0 - creative
  * 05.0 - design
- * 06.0 - price-points
+ * 06.0 - price-point
  * 07.0 - states
  * 08.0 - click-here message lang-switch disclaimer
 */
@@ -138,9 +138,9 @@ a:hover {
     height: 175px;
 }
 
-/* 06.0 - price-points */
+/* 06.0 - price-point */
 
-.price-points {
+.price-point {
     position: absolute;
     display: block;
     top: 0;
