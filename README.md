@@ -186,6 +186,7 @@ This command only accepts *Strings*. You can use the following command:
 | Already Subscribed:   | state('show-alreadysubscribed')   |
 | Blocker:              | state('show-blocker')             |
 | Immediate Subscribe:  | state('show-immediatesubscribe')  |
+| Redirect:             | state('show-redirect')            |
 | Redirect Service:     | state('show-redirectservice')     |
 | Redirect XHR Return:  | state('show-redirectxhrreturn')   |
 | Pop Up:               | state('show-popup')               |

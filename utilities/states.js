@@ -32,6 +32,7 @@
         'show-alreadysubscribed',
         'show-blocker',
         'show-immediatesubscribe',
+        'show-redirect',
         'show-redirectservice',
         'show-redirectxhrreturn',
         'show-popup'
@@ -51,13 +52,14 @@
                 "- Already Subscribed: \t\tstate('show-alreadysubscribed')\n" +
                 "- Blocker: \t\t\t\t\tstate('show-blocker')\n" +
                 "- Immediate Subscribe: \t\tstate('show-immediatesubscribe')\n" +
+                "- Redirect: \t\t\t\tstate('show-redirect')\n" +
                 "- Redirect Service: \t\tstate('show-redirectservice')\n" +
                 "- Redirect XHR Return: \t\tstate('show-redirectxhrreturn')\n" +
                 "- Pop Up: \t\t\t\t\tstate('show-popup')\n" + 
                 "- Remove Overlay: \t\t\tstate('')"
             );
         }
-        else if (string == '' || string == 'show-alreadysubscribed' || string == 'show-blocker' || string == 'show-immediatesubscribe' || string == 'show-redirectservice' || string == 'show-redirectxhrreturn' || string == 'show-popup') {
+        else if (string == '' || string == 'show-alreadysubscribed' || string == 'show-blocker' || string == 'show-immediatesubscribe' || string == 'show-redirect' || string == 'show-redirectservice' || string == 'show-redirectxhrreturn' || string == 'show-popup') {
             for(var i=0; i<pageOverlayStates.length; i++) {
                 removeClass(container, pageOverlayStates[i]);
             }

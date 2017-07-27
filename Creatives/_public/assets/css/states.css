@@ -250,6 +250,7 @@
 #container.show-alreadysubscribed #blocker,
 #container.show-blocker #blocker,
 #container.show-immediatesubscribe #blocker,
+#container.show-redirect #blocker,
 #container.show-redirectservice #blocker,
 #container.show-redirectxhrreturn #blocker {
     display: -webkit-flex;
