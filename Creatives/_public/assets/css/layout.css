@@ -198,6 +198,7 @@ a:hover {
     display: inline-block;
 }
 
+#container.rtb #lang-switch,
 #container.show-doubleconfirmation #lang-switch,
 #container.show-pinentry #lang-switch,
 #container.show-mo #lang-switch,
