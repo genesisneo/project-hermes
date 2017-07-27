@@ -1,0 +1,26 @@
+{
+    "folders":
+    [
+        {
+            "folder_exclude_patterns": [
+                ".atom",
+                ".sublime",
+                ".vscode",
+                "data",
+                "node_modules",
+                "utilities"
+            ],
+            "file_exclude_patterns": [
+                ".gitignore",
+                "favicon.ico",
+                "gulpfile.js",
+                "Hermes.sublime-project",
+                "Hermes.sublime-workspace",
+                "package.json",
+                "qr.html",
+                "README.md"
+            ],
+            "path": "."
+        }
+    ]
+}
