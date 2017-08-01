@@ -8,7 +8,7 @@ var gulpParameters;
 
 gulp.task('data', function() {
     var splitParameters = gulpParameters.split('/');
-    request.get('http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+splitParameters[1]+'&countryCode='+splitParameters[3]+'&operators='+splitParameters[4])
+    request.get('http://172.30.0.166:7870/api/Lpp/pagetexts/Filter?service='+splitParameters[1]+'&countryCode='+splitParameters[3]+'&operators='+splitParameters[4]+'&languageCode=')
         .pipe(source('texts.json'))
         .pipe(gulp.dest('../data/'));
 });
