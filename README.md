@@ -174,7 +174,7 @@ For editors layout and settings, you can copy my custom settings [here](https://
 
 This command only accepts *Strings*. You can use the following command:
 
-| State                 | Command                           |
+| States                | Command                           |
 |-----------------------|-----------------------------------|
 | Direct Subscribe:     | state('show-directsubscribe')     |
 | Double Confirmation:  | state('show-doubleconfirmation')  |
@@ -183,6 +183,9 @@ This command only accepts *Strings*. You can use the following command:
 | MO Message:           | state('show-mo')                  |
 | Congrats:             | state('show-congrats')            |
 | Subscription Polling: | state('show-subscriptionpolling') |
+
+| Overlays              | Command                           |
+|-----------------------|-----------------------------------|
 | Already Subscribed:   | state('show-alreadysubscribed')   |
 | Blocker:              | state('show-blocker')             |
 | Immediate Subscribe:  | state('show-immediatesubscribe')  |

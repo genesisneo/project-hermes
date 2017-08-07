@@ -42,6 +42,7 @@
         if (string == null || string == '?' || string == 'help') {
             console.log(
                 "You can use the following command:\n\n" +
+                "+ States\n\n" +
                 "- Direct Subscribe: \t\tstate('show-directsubscribe')\n" +
                 "- Double Confirmation: \t\tstate('show-doubleconfirmation')\n" +
                 "- Number Entry: \t\t\tstate('show-numberentry')\n" +
@@ -49,6 +50,7 @@
                 "- MO Message: \t\t\t\tstate('show-mo')\n" +
                 "- Congrats: \t\t\t\tstate('show-congrats')\n" +
                 "- Subscription Polling: \tstate('show-subscriptionpolling')\n" +
+                "+ Overlays\n\n" +
                 "- Already Subscribed: \t\tstate('show-alreadysubscribed')\n" +
                 "- Blocker: \t\t\t\t\tstate('show-blocker')\n" +
                 "- Immediate Subscribe: \t\tstate('show-immediatesubscribe')\n" +
