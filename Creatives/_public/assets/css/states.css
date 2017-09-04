@@ -7,16 +7,18 @@
  * * 01.2 - pulse
  * * 01.3 - error
  * 02.0 - states
- * 03.0 - directsubscribe
- * 04.0 - doubleconfirmation
- * 05.0 - numberentry
- * 06.0 - pinentry
- * 07.0 - mo
- * 08.0 - congrats
- * 09.0 - subscriptionpolling
- * 10.0 - overlay
- * * 10.1 - blocker
- * * 10.2 - popup
+ * 03.0 - clicktag
+ * 04.0 - directsubscribe
+ * 05.0 - doubleconfirmation
+ * 06.0 - numberentry
+ * 07.0 - pinentry
+ * 08.0 - mo
+ * 09.0 - congrats
+ * 10.0 - operatorselection
+ * 11.0 - subscriptionpolling
+ * 12.0 - overlay
+ * * 12.1 - blocker
+ * * 12.2 - popup
 */
 
 /* 01.0 - global */
@@ -71,12 +73,14 @@
 
 /* 02.0 - states */
 
+#clicktag,
 #directsubscribe,
 #doubleconfirmation,
 #numberentry,
 #pinentry,
 #mo,
 #congrats,
+#operatorselection,
 #subscriptionpolling {
     position: relative;
     display: none;
@@ -86,7 +90,20 @@
     text-align: center;
 }
 
-/* 03.0 - directsubscribe */
+/* 03.0 - clicktag */
+
+#container.show-clicktag #clicktag {
+    display: block;
+}
+
+#subscribe-clicktag-message {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+}
+
+/* 04.0 - directsubscribe */
 
 #container.show-directsubscribe #directsubscribe {
     display: block;
@@ -99,7 +116,7 @@
     padding: 0;
 }
 
-/* 04.0 - doubleconfirmation */
+/* 05.0 - doubleconfirmation */
 
 #container.show-doubleconfirmation #doubleconfirmation {
     display: block;
@@ -112,7 +129,7 @@
     padding: 0;
 }
 
-/* 05.0 - numberentry */
+/* 06.0 - numberentry */
 
 #container.show-numberentry #numberentry {
     display: block;
@@ -135,7 +152,7 @@
     font-size: 16px;
 }
 
-/* 06.0 - pinentry */
+/* 07.0 - pinentry */
 
 #container.show-pinentry #pinentry {
     display: block;
@@ -159,7 +176,7 @@
     text-align: center;
 }
 
-/* 07.0 - mo */
+/* 08.0 - mo */
 
 #container.show-mo #mo {
     display: block;
@@ -180,7 +197,7 @@
     font-weight: bold;
 }
 
-/* 08.0 - congrats */
+/* 09.0 - congrats */
 
 #container.show-congrats #congrats {
     display: block;
@@ -199,7 +216,35 @@
     font-weight: bold;
 }
 
-/* 09.0 - subscriptionpolling */
+/* 10.0 - operatorselection */
+
+#container.show-operatorselection #operatorselection {
+    display: block;
+}
+
+#operators {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+#operators span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.btn-operator {
+    display: inline-block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+}
+
+/* 11.0 - subscriptionpolling */
 
 #container.show-subscriptionpolling #subscriptionpolling {
     display: block;
@@ -224,7 +269,7 @@
     background-size: 25px 25px;
 }
 
-/* 10.0 - overlay */
+/* 12.0 - overlay */
 
 .overlay {
     position: absolute;
@@ -245,14 +290,15 @@
     z-index: 999;
 }
 
-/* 10.1 - blocker */
+/* 12.1 - blocker */
 
 #container.show-alreadysubscribed #blocker,
 #container.show-blocker #blocker,
 #container.show-immediatesubscribe #blocker,
 #container.show-redirect #blocker,
 #container.show-redirectservice #blocker,
-#container.show-redirectxhrreturn #blocker {
+#container.show-redirectxhrreturn #blocker,
+#container.show-wifipolling #blocker {
     display: -webkit-flex;
     display: flex;
 }
@@ -283,7 +329,7 @@
     background-size: 25px 25px;
 }
 
-/* 10.2 - popup */
+/* 12.2 - popup */
 
 #container.show-popup #popup {
     display: -webkit-flex;

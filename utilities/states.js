@@ -20,12 +20,14 @@
     // --- states controls
 
     var pageStates = [
+        'show-clicktag',
         'show-directsubscribe',
         'show-doubleconfirmation',
         'show-numberentry',
         'show-pinentry',
         'show-mo',
         'show-congrats',
+        'show-operatorselection',
         'show-subscriptionpolling'
     ];
     var pageOverlayStates = [
@@ -35,6 +37,7 @@
         'show-redirect',
         'show-redirectservice',
         'show-redirectxhrreturn',
+        'show-wifipolling',
         'show-popup'
     ];
     var container = document.getElementById('container');
@@ -43,13 +46,15 @@
             console.log(
                 "You can use the following command:\n\n" +
                 "+ States\n\n" +
+                "- Click Tag: \t\t\t\tstate('show-clicktag')\n" +
                 "- Direct Subscribe: \t\tstate('show-directsubscribe')\n" +
                 "- Double Confirmation: \t\tstate('show-doubleconfirmation')\n" +
                 "- Number Entry: \t\t\tstate('show-numberentry')\n" +
                 "- PIN Entry: \t\t\t\tstate('show-pinentry')\n" +
                 "- MO Message: \t\t\t\tstate('show-mo')\n" +
                 "- Congrats: \t\t\t\tstate('show-congrats')\n" +
-                "- Subscription Polling: \tstate('show-subscriptionpolling')\n" +
+                "- Operator Selection: \t\tstate('show-operatorselection')\n" +
+                "- Subscription Polling: \tstate('show-subscriptionpolling')\n\n" +
                 "+ Overlays\n\n" +
                 "- Already Subscribed: \t\tstate('show-alreadysubscribed')\n" +
                 "- Blocker: \t\t\t\t\tstate('show-blocker')\n" +
@@ -57,11 +62,12 @@
                 "- Redirect: \t\t\t\tstate('show-redirect')\n" +
                 "- Redirect Service: \t\tstate('show-redirectservice')\n" +
                 "- Redirect XHR Return: \t\tstate('show-redirectxhrreturn')\n" +
+                "- WiFi Polling: \t\t\tstate('show-wifipolling')\n" +
                 "- Pop Up: \t\t\t\t\tstate('show-popup')\n" + 
                 "- Remove Overlay: \t\t\tstate('')"
             );
         }
-        else if (string == '' || string == 'show-alreadysubscribed' || string == 'show-blocker' || string == 'show-immediatesubscribe' || string == 'show-redirect' || string == 'show-redirectservice' || string == 'show-redirectxhrreturn' || string == 'show-popup') {
+        else if (string == '' || string == 'show-alreadysubscribed' || string == 'show-blocker' || string == 'show-immediatesubscribe' || string == 'show-redirect' || string == 'show-redirectservice' || string == 'show-redirectxhrreturn' || string == 'show-wifipolling' || string == 'show-popup') {
             for(var i=0; i<pageOverlayStates.length; i++) {
                 removeClass(container, pageOverlayStates[i]);
             }

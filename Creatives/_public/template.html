@@ -21,7 +21,7 @@
     
     <div id="container" class="layout-viewport en show-directsubscribe">
 
-        <a id="close" href="javascript:Close();"></a>
+        <a id="close" href="javascript:Close();" style="display:none;"></a>
 
         <div id="creative">
 
@@ -32,7 +32,13 @@
             <p id="price-point" class="price-point">[price-points]</p>
 
             <div id="subscr-flow-states" class="states">
-                
+
+                <div id="clicktag">
+                    <p id="subscribe-clicktag-message">[subscribe-clicktag-message]</p>
+                    <a id="subscribe-clicktag" class="btn pulse" href="[action-url]">[subscribe-clicktag]</a>
+                    <a id="subscribe-clicktag-no" href="[action-no-url]">[subscribe-clicktag-no]</a>
+                </div>
+
                 <div id="directsubscribe">
                     <p id="directsubscribe-message">[directsubscribe-message]</p>
                     <a id="subscribe" class="btn pulse" href="[action-url]">[subscribe]</a>
@@ -49,14 +55,14 @@
                     <label id="numberentry-message">[numberentry-message]</label>
                     <input id="input-number" type="tel" maxlength="10" value="0">
                     <a id="submit-number" class="btn pulse" href="[action-url]">[submit-number]</a>
-                    <p id="error-invalid-number" class="error">[error-invalid-number]</p>
+                    <p id="invalid-number-error" class="error">[error-invalid-number]</p>
                 </div>
 
                 <div id="pinentry">
                     <label id="pinentry-message">[pinentry-message]</label>
                     <input id="input-pin" type="tel" maxlength="4" value="">
                     <a id="submit-pin" class="btn pulse" href="[action-url]">[submit-pin]</a>
-                    <p id="error-invalid-pin" class="error">[error-invalid-pin]</p>
+                    <p id="invalid-pin-error" class="error">[error-invalid-pin]</p>
                 </div>
 
                 <div id="mo">
@@ -69,6 +75,15 @@
                 <div id="congrats">
                     <p id="congrats-title">[congrats-title]</p>
                     <p id="congrats-message">[congrats-message]</p>
+                </div>
+
+                <div id="operatorselection">
+                    <div id="operators">
+                        <span>[operator-selection-text]</span>
+                        <a href="javascript:submit_stt_action('action-oc-xxx');" id="operator1" class="btn-operator"></a>
+                        <a href="javascript:submit_stt_action('action-oc-xxx');" id="operator2" class="btn-operator"></a>
+                        <a href="javascript:submit_stt_action('action-oc-xxx');" id="operator3" class="btn-operator"></a>
+                    </div>
                 </div>
 
                 <div id="subscriptionpolling">

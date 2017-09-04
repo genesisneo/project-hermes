@@ -176,12 +176,14 @@ This command only accepts *Strings*. You can use the following command:
 
 | States                | Command                           |
 |-----------------------|-----------------------------------|
+| Click tag:            | state('show-clicktag')            |
 | Direct Subscribe:     | state('show-directsubscribe')     |
 | Double Confirmation:  | state('show-doubleconfirmation')  |
 | Number Entry:         | state('show-numberentry')         |
 | PIN Entry:            | state('show-pinentry')            |
 | MO Message:           | state('show-mo')                  |
 | Congrats:             | state('show-congrats')            |
+| Operator Selection:   | state('show-operatorselection')   |
 | Subscription Polling: | state('show-subscriptionpolling') |
 
 | Overlays              | Command                           |
@@ -192,6 +194,7 @@ This command only accepts *Strings*. You can use the following command:
 | Redirect:             | state('show-redirect')            |
 | Redirect Service:     | state('show-redirectservice')     |
 | Redirect XHR Return:  | state('show-redirectxhrreturn')   |
+| WiFi Polling:         | state('show-wifipolling')         |
 | Pop Up:               | state('show-popup')               |
 | Remove Overlay:       | state('')                         |
 
